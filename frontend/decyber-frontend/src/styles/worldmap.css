@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #3D6343;
+    background-color : #01171b;
+}
+.world-map-svg{
+    width: 95vw;
+    height: 95vh;
+}
+.world-map-svg path{
+    /* stroke is for border color */
+    /* stroke-width is for width of border of countries */
+    fill: #00394f;
+    stroke: #eee;
+    stroke-width: .25;
+}
+.world-map-svg path:hover{
+    fill: #006284;
+    transition: 0.6s;
+    cursor: pointer;
+}
+.chosen-countries path{
+    fill: lightgoldenrodyellow;
+    stroke: #eee;
+    stroke-width: .25;
+}

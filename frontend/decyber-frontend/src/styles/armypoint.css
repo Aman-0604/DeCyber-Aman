@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #3D6343;
+    background-color : #01171b;
+}
+.ArmyPoint{
+    background-color : #01171b;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 5rem;
+}
+.carousel-content{
+    border: 1px solid #3D6343;
+    color:#3D6343;
+    margin: auto;
+    width: 90vw;
+    height: 25rem;
+}
+.carousel-subcontent{
+    font-size: 30px;
+}
