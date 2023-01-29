@@ -10,13 +10,31 @@
     height: 100vh;
 }
 .cp-content{
-    border: 1px solid #3D6343;
     color:#3D6343;
     margin: auto;
     margin-top: 5rem;
     width: 90vw;
+    background-color: #02353ebd;
     height: 25rem;
+    border-radius: 2rem;
+}
+.cp-content *{
+    background: transparent;
 }
 .cp-subcontent{
     font-size: 30px;
+    width: 100%;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.cp-subcontent textarea{
+    border-radius: 1rem;
+    padding: .5rem;
+}
+.cp-subcontent textarea:focus{
+    outline: 1px solid lightgreen;
+    caret-color: cyan;
+    font-weight: 400;
+    color: white;
 }
