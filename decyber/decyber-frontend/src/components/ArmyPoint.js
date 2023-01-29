@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import userContext from '../context/users/userContext';
 import "../styles/armypoint.css"
-
+import questions from '../questions'
 const ArmyPoint = () => {
 
   const user_detail = useContext(userContext);
@@ -17,22 +17,39 @@ const ArmyPoint = () => {
     <div className="ArmyPoint">
       <div className="ap-box">
         <div id="carouselExample" className="carousel slide">
-          <div className="carousel-inner">
+        <div className="carousel-inner">
             <div className="carousel-item active">
-              <div className='carousel-content d-flex justify-content-center align-items-center'>
-                <div className='carousel-subcontent'>Question-1</div>
+              <div className='carousel-content d-flex justify-content-center align-items-baseline'>
+                <div className='carousel-subcontent question-section'>
+                  <div className="question">
+                    <p className="question-pallete">{questions[0].qid}.{questions[0].ques}</p>
+                    <div style={{ backgroundColor: "rgba(255,255,255,0.3)", height: "3rem", borderRadius: ".5rem" }}>
+                      <p className="points-pallete">Pts. {questions[0].pts}</p>
+                    </div>
+                  </div>
+                  <textarea name="answer" id="answer" rows="5" placeholder='Write your answer here'></textarea>
+                </div>
               </div>
             </div>
-            <div className="carousel-item">
-              <div className='carousel-content d-flex justify-content-center align-items-center'>
-                <div className='carousel-subcontent'>Question-2</div>
-              </div>
-            </div>
-            <div className="carousel-item">
-              <div className='carousel-content d-flex justify-content-center align-items-center'>
-                <div className='carousel-subcontent'>Question-3</div>
-              </div>
-            </div>
+
+            { // eslint-disable-next-line
+              questions.map((ele, index) => {
+              if (index !== 0) {
+                return <div className="carousel-item">
+                  <div className='carousel-content d-flex justify-content-center align-items-baseline'>
+                    <div className='carousel-subcontent question-section'>
+                      <div className="question">
+                        <p className="question-pallete">{ele.qid}.{ele.ques}</p>
+                        <div style={{ backgroundColor: "rgba(255,255,255,0.3)", height: "3rem", borderRadius: ".5rem" }}>
+                          <p className="points-pallete">Pts. {ele.pts}</p>
+                        </div>
+                      </div>
+                      <textarea name="answer" id="answer" rows="5" placeholder='Write your answer here'></textarea>
+                    </div>
+                  </div>
+                </div>
+              }
+            })}
           </div>
           <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
