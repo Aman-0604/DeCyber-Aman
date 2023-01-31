@@ -10,7 +10,7 @@
     height: 100vh;
 }
 .dashboard-outlier{
-    flex-direction: row;
+    /* flex-direction: row; */
     width: 85vw;
     height: 40rem;
     margin: auto;
@@ -61,7 +61,7 @@ table tbody tr td{
     align-items: center;
     padding: .5rem;
     gap: .3rem;
-    flex-wrap:inherit;
+
 }
 .outlier-3{
     /* border: .1rem solid #01500d; */
