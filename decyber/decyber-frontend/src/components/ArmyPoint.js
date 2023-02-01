@@ -1,23 +1,27 @@
-import React, { useContext,useState } from 'react';
+import React, { useContext,useState,useEffect } from 'react';
 import userContext from '../context/users/userContext';
 import "../styles/armypoint.css"
 import questions from '../questions'
-const ArmyPoint = () => {
+import { useNavigate } from 'react-router-dom';
 
+const ArmyPoint = () => {
+  let navigate = useNavigate();
   const user_detail = useContext(userContext);
   const { user, updateUser } = user_detail;
 
-  const updatePoints = () => {
-    const newap = user.ap + 10;
-    const newcp = user.cp + 10;
-    updateUser(newap, newcp);
+  const updatePoints = ({ques_id,ans,points}) => {
+    const question = questions.find((question)=>question.qid===ques_id); // find is a js function to search for an element in an array
+    if (question.ans===ans){
+      // update the points of the team if the answer matches correctly
+      const newap = user.ap + points;
+      const newcp = user.cp + points;
+      updateUser(newap, newcp);
+    }
   }
   const [text, setText] = useState("")
-  // let textval;
+
   const onChange = (e) => {
     setText(e.target.value)
-    // console.log(e.target.value)
-    // textval = e.target.value;
   }
   const clearText = () => {
     setText("");
@@ -25,6 +29,12 @@ const ArmyPoint = () => {
   const handleSubmitClick = () => {
     setText(text)
   }
+  useEffect(() => {
+    if (!localStorage.getItem('token')){
+      navigate('/login')
+    }
+  }, [])
+  
   return (
     <div className="ArmyPoint">
       <div className="ap-box">
@@ -44,6 +54,7 @@ const ArmyPoint = () => {
                   <button className="btn btn-danger me-3" style={{ width: "40%" }} onClick={clearText}>Clear</button>
                     <button className="btn btn-success" style={{ width: "40%" }} onClick={() => {
                             handleSubmitClick();
+                            updatePoints({ques_id:questions[0].qid,ans:text,points:questions[0].pts});
                             clearText();
                           }} >Submit</button>
                   </div>                
@@ -68,6 +79,7 @@ const ArmyPoint = () => {
                           <button className="btn btn-danger me-3" style={{ width: "40%" }} onClick={clearText}>Clear</button>
                           <button className="btn btn-success" style={{ width: "40%" }} onClick={() => {
                             handleSubmitClick();
+                            updatePoints({ques_id:ele.qid,ans:text,points:ele.pts});
                             clearText();
                           }} >Submit</button>
                         </div>

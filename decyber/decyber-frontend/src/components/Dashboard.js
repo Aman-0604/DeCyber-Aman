@@ -2,10 +2,13 @@ import React,{useContext,useEffect} from 'react'
 import userContext from '../context/users/userContext';
 import "../styles/dashboard.css"
 import { Avatar } from '../icons';
-export default function Dashboard() {
+import Timer from './Timer';
+
+export default function Dashboard({time}) {
   const user_detail = useContext(userContext);
   const { user, getUser } = user_detail;
   const array = [{ rank: 1, name: "India", points: 2500 }, { rank: 1, name: "India", points: 2500 }, { rank: 1, name: "India", points: 2500 }]
+
   useEffect(() => {
       getUser();
       // eslint-disable-next-line
@@ -102,7 +105,7 @@ export default function Dashboard() {
               <div className="remaining-time">
                 <div className="timer">
                   <div className="timer-display">
-                    <h4>03:00:00</h4>
+                    {/* <Timer expiryTimestamp={time} style={{background: "transparent",color: "white",marginRight: ".2rem"}}/> */}
                     <p style={{color:"white",fontWeight:"500"}}>hrs</p>
                   </div>
                 </div>

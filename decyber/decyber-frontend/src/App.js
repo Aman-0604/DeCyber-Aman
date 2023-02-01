@@ -15,6 +15,9 @@ import {
 } from "react-router-dom";
 
 function App() {
+  const time = new Date();
+  time.setSeconds(time.getSeconds() + 10800);
+
   return (
     // all under JSX fragment(<> & </>) as we need to pass only one element in the return();
     <>
@@ -25,7 +28,7 @@ function App() {
             <Route exact path="/" element={<WorldMap />} />
             <Route exact path="/ap" element={<ArmyPoint />} />
             <Route exact path="/cp/:country" element={<CountryPoint />} />
-            <Route exact path="/dashboard" element={<Dashboard />} />
+            <Route exact path="/dashboard" element={<Dashboard time={time}/>} />
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/signup" element={<Signup />} />
           </Routes>
