@@ -8,7 +8,7 @@ const WorldMap = () => {
   let navigate = useNavigate();
 
   const user_detail = useContext(userContext);
-  const { user, getUser } = user_detail;
+  const { getUser } = user_detail;
 
   useEffect(() => {
     if (localStorage.getItem('token')) {
@@ -23,10 +23,6 @@ const WorldMap = () => {
 
   return (
     <div className="WorldMap">
-      <div className="point-section">
-        <p>Army Points : {user.ap}</p>
-        <p>Country Points : {user.cp}</p>
-      </div>
       <ReactLogo />
     </div>
   );

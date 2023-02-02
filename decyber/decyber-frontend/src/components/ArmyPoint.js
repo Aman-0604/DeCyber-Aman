@@ -14,7 +14,7 @@ const ArmyPoint = () => {
     if (question.ans===ans){
       // update the points of the team if the answer matches correctly
       const newap = user.ap + points;
-      const newcp = user.cp + points;
+      const newcp = user.cp + 0;
       updateUser(newap, newcp);
     }
   }
@@ -98,11 +98,6 @@ const ArmyPoint = () => {
             <span className="visually-hidden">Next</span>
           </button>
         </div>
-      </div>
-      <div className="point-section">
-        <p>Army Points : {user.ap}</p>
-        <p>Country Points : {user.cp}</p>
-        <button type="button" className="btn" onClick={updatePoints} style={{ backgroundColor: "#212529", color: "#3D6343", fontSize: "20px", fontWeight: "600" }}>Update AP</button>
       </div>
     </div>
   );
