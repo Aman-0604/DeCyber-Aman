@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import "../styles/signup.css"
 import countries from '../countries'
 
-export default function Signup() {
+export default function Signup(props) {
     let navigate = useNavigate();
     const [credentials, setCredentials] = useState({ team_name: "", team_password: "", team_leader: "", team_leader_email: "", team_leader_college: "", team_member_1: "", team_member_1_email: "", team_member_1_college: "", team_member_2: "", team_member_2_email: "", team_member_2_college: "" });
 
@@ -26,6 +26,9 @@ export default function Signup() {
             //save the auth token and redirect
             localStorage.setItem('token', json.auth_token);
             navigate("/");
+        }
+        else {
+            props.showAlert("danger","Some Error Occured");
         }
     }
     return (

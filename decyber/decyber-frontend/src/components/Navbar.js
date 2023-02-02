@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 
-export default function Navbar() {
+export default function Navbar(props) {
 
 
     const logoutHandler = () => {
         localStorage.removeItem('token');
-        // props.showAlert("success","Logout Successful");
+        props.showAlert("success","Logout Successful");
     }
     return (
         <div>

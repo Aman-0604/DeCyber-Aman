@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import "../styles/countrypoint.css"
 
-const CountryPoint = () => {
+const CountryPoint = (props) => {
   let { country } = useParams();
   const [text, setText] = useState("")
   // let textval;

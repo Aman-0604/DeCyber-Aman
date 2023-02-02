@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import "../styles/login.css"
 
 
-export default function Login() {
+export default function Login(props) {
     let navigate = useNavigate();
     const [credentials, setCredentials] = useState({ team_name: "", team_password: "" });
 
@@ -24,13 +24,13 @@ export default function Login() {
         const json = await response.json();
         //   console.log(json);
         if (json.success) {
-            // showAlert("success", "Login Successful");
+            props.showAlert("success", "Login Successful");
             //save the auth token and redirect
             localStorage.setItem('token', json.auth_token);
             navigate("/");
         }
         else {
-            // showAlert("danger", "Invalid Credentials");
+            props.showAlert("danger", "Invalid Credentials");
         }
 
     }

@@ -4,7 +4,7 @@ import "../styles/armypoint.css"
 import questions from '../questions'
 import { useNavigate } from 'react-router-dom';
 
-const ArmyPoint = () => {
+const ArmyPoint = (props) => {
   let navigate = useNavigate();
   const user_detail = useContext(userContext);
   const { user, updateUser } = user_detail;
@@ -16,6 +16,7 @@ const ArmyPoint = () => {
       const newap = user.ap + points;
       const newcp = user.cp + 0;
       updateUser(newap, newcp);
+      props.showAlert("success",`${points} Armypoints added successfuly`);
     }
   }
   const [text, setText] = useState("")
