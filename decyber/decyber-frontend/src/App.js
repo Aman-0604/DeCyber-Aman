@@ -15,8 +15,10 @@ import {
 } from "react-router-dom";
 
 function App() {
-  const time = new Date();
-  time.setSeconds(time.getSeconds() + 10800);
+  const targetTime=new Date('2023/02/15 13:00:00');
+  const currentTime= new Date();
+  const time= new Date();
+  time.setMilliseconds(targetTime-currentTime);
 
   return (
     // all under JSX fragment(<> & </>) as we need to pass only one element in the return();

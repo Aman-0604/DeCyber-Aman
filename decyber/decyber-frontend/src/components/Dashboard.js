@@ -3,16 +3,23 @@ import userContext from '../context/users/userContext';
 import "../styles/dashboard.css"
 import { Avatar } from '../icons';
 import Timer from './Timer';
+import { useNavigate } from 'react-router-dom';
 
 export default function Dashboard({time}) {
+  
+  let navigate = useNavigate();
   const user_detail = useContext(userContext);
   const { user, getUser } = user_detail;
   const array = [{ rank: 1, name: "India", points: 2500 }, { rank: 1, name: "India", points: 2500 }, { rank: 1, name: "India", points: 2500 }]
 
   useEffect(() => {
+    if (!localStorage.getItem('token')){
+      navigate('/login')
+    }
+    else{
       getUser();
-      // eslint-disable-next-line
-  }, [])//[]means sirf ek baar yeh function chalega
+    }
+  }, [])
   return (
     <>
       {/* <div className='Dashboard'>
@@ -105,7 +112,7 @@ export default function Dashboard({time}) {
               <div className="remaining-time">
                 <div className="timer">
                   <div className="timer-display">
-                    {/* <Timer expiryTimestamp={time} style={{background: "transparent",color: "white",marginRight: ".2rem"}}/> */}
+                    <Timer expiryTimestamp={time} style={{background: "transparent",color: "white",marginRight: ".2rem"}}/>
                     <p style={{color:"white",fontWeight:"500"}}>hrs</p>
                   </div>
                 </div>
