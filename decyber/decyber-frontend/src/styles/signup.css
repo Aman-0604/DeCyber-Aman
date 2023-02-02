@@ -1,6 +1,25 @@
 .Signup{
-    color: #3D6343;
     background-color : #01171b;
     width: 100vw;
     height: 100vh;
+}
+.member-signup *{
+    color: aquamarine;
+    background-color: transparent;
+}
+.member-signup{
+    background-color: #02434fb1;
+    margin-bottom: .5rem;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.team-signup *{
+    color: aquamarine;
+    background-color: transparent;
+}
+.team-signup{
+    background-color: #02434fb1;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: .5rem;
 }
