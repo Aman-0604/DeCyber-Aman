@@ -5,7 +5,7 @@ import "../styles/login.css"
 
 export default function Login() {
     let navigate = useNavigate();
-    const [credentials, setCredentials] = useState({ email: "", password: "" });
+    const [credentials, setCredentials] = useState({ team_name: "", team_password: "" });
 
 
     const onChange = (e) => {
@@ -19,7 +19,7 @@ export default function Login() {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ email: credentials.email, password: credentials.password })//will convert the object into type JSON
+            body: JSON.stringify({ team_name: credentials.team_name, team_password: credentials.team_password })//will convert the object into type JSON
         });
         const json = await response.json();
         //   console.log(json);
@@ -39,16 +39,12 @@ export default function Login() {
             <div className='container' style={{ width: "50%" }}>
                 <form onSubmit={submitHandler}>
                     <div className="mb-3">
-                        <label htmlFor="exampleInputEmail1" className="form-label" style={{ color: "white" }}><h3>Email address</h3> </label>
-                        <input type="email" className="form-control" name="email" id="email" aria-describedby="emailHelp" value={credentials.email} onChange={onChange} />
+                        <label htmlFor="exampleInputEmail1" className="form-label" style={{ color: "white" }}><h3>Team Name</h3> </label>
+                        <input type="team_name" className="form-control" name="team_name" id="team_name" aria-describedby="emailHelp" value={credentials.team_name} onChange={onChange} />
                     </div>
                     <div className="mb-3">
-                        <label htmlFor="exampleInputPassword1" className="form-label" style={{ color: "white" }} ><h3>Password</h3></label>
-                        <input type="password" className="form-control" name="password" id="password" value={credentials.password} onChange={onChange} />
-                    </div>
-                    <div className="mb-3 form-check">
-                        <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                        <label className="form-check-label" htmlFor="exampleCheck1" style={{ color: "white" }}>Forgot Password</label>
+                        <label htmlFor="exampleInputPassword1" className="form-label" style={{ color: "white" }} ><h3>Team Password</h3></label>
+                        <input type="team_password" className="form-control" name="team_password" id="team_password" value={credentials.team_password} onChange={onChange} />
                     </div>
                     <button type="submit" className="btn btn-primary" style={{ backgroundColor: "#212529", color: "#3D6343", border: "none" }}>Login</button>
                     <hr style={{ color: '#3D6343' }} />

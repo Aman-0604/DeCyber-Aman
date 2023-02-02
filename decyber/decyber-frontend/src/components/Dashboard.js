@@ -48,7 +48,7 @@ export default function Dashboard({time}) {
         </div>
       </div> */}
       <div className='Dashboard'>
-        <h1 style={{ textAlign: "center", margin: "1rem 0",color:"lightgreen" }}>{user.team}</h1>
+        <h1 style={{ textAlign: "center", margin: "1rem 0",color:"lightgreen" }}>{user.team_name}</h1>
         <div className="dashboard-outlier d-flex justify-content-center align-items-center">
           <div className="outlier-2 d-flex flex-column justify-content-center align-items-center" >
             <div className="user-status">
@@ -83,9 +83,9 @@ export default function Dashboard({time}) {
                     <Avatar />
                   </div>
                   <div className="basic-info">
-                    <p className="name">{user.name}</p>
-                    <p className="designation">{user.email}</p>
-                    <p className="designation">{user.college}</p>
+                    <p className="name">{user.team_leader}</p>
+                    <p className="designation">{user.team_leader_email}</p>
+                    <p className="designation">{user.team_leader_college}</p>
                   </div>
                 </div>
                 <div className="member">
@@ -93,9 +93,9 @@ export default function Dashboard({time}) {
                     <Avatar />
                   </div>
                   <div className="basic-info">
-                    <p className="name">{user.name}</p>
-                    <p className="designation">{user.email}</p>
-                    <p className="designation">{user.college}</p>
+                    <p className="name">{user.team_member_1}</p>
+                    <p className="designation">{user.team_member_1_email}</p>
+                    <p className="designation">{user.team_member_1_college}</p>
                   </div>
                 </div>
                 <div className="member">
@@ -103,9 +103,9 @@ export default function Dashboard({time}) {
                     <Avatar />
                   </div>
                   <div className="basic-info">
-                    <p className="name">{user.name}</p>
-                    <p className="designation">{user.email}</p>
-                    <p className="designation">{user.college}</p>
+                    <p className="name">{user.team_member_2}</p>
+                    <p className="designation">{user.team_member_2_email}</p>
+                    <p className="designation">{user.team_member_2_college}</p>
                   </div>
                 </div>
               </div>
