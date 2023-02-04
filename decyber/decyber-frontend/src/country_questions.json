@@ -1,0 +1,26 @@
+[
+    {
+        "type": 0,
+        "code": "IN",
+        "name": "India",
+        "ques": "8+8=?",
+        "pts": 50,
+        "ans": "16"
+    },
+    {
+        "type": 0,
+        "code": "RU",
+        "name": "Russian Federation",
+        "ques": "8+7=?",
+        "pts": 100,
+        "ans": "15"
+    },
+    {
+        "type": 0,
+        "code": "AU",
+        "name": "Australia",
+        "ques": "8+6=?",
+        "pts": 500,
+        "ans": "14"
+    }
+]

@@ -7,10 +7,10 @@ import { useNavigate } from 'react-router-dom';
 const ArmyPoint = (props) => {
   let navigate = useNavigate();
   const user_detail = useContext(userContext);
-  const { user, updateUser } = user_detail;
+  const { user, getUser,updateUser } = user_detail;
 
   const army_detail = useContext(armyContext);
-  const { apq, getapq } = army_detail;
+  const { apq, getapq, updateapq} = army_detail;
 
   const updatePoints = ({ ques_id, ans, points }) => {
     const question = apq.find((question) => question.qid === ques_id); // find is a js function to search for an element in an array
@@ -20,6 +20,7 @@ const ArmyPoint = (props) => {
       const newcp = user.cp + 0;
       updateUser(newap, newcp);
       props.showAlert("success", `${points} Armypoints added successfuly`);
+      updateapq(question.qid, 1);
     }
     else{
       props.showAlert("danger", `Wrong Answer`);
@@ -42,6 +43,7 @@ const ArmyPoint = (props) => {
     }
     else {
       getapq();
+      console.log(user);
     }
   }, [])
 
