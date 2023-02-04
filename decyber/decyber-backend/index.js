@@ -12,6 +12,7 @@ app.use(express.json());
 
 // Available Routes
 app.use('/api/auth',require('./routes/auth'));
+app.use('/api/ap_questions',require('./routes/ap_questions'));
 
 app.listen(port, () => {
   console.log(`tagit_backend is listening on port ${port}`)

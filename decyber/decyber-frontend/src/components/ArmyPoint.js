@@ -1,7 +1,7 @@
-import React, { useContext,useState,useEffect } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import userContext from '../context/users/userContext';
+import armyContext from '../context/army_questions/armyContext';
 import "../styles/armypoint.css"
-import questions from '../questions'
 import { useNavigate } from 'react-router-dom';
 
 const ArmyPoint = (props) => {
@@ -9,14 +9,20 @@ const ArmyPoint = (props) => {
   const user_detail = useContext(userContext);
   const { user, updateUser } = user_detail;
 
-  const updatePoints = ({ques_id,ans,points}) => {
-    const question = questions.find((question)=>question.qid===ques_id); // find is a js function to search for an element in an array
-    if (question.ans===ans){
+  const army_detail = useContext(armyContext);
+  const { apq, getapq } = army_detail;
+
+  const updatePoints = ({ ques_id, ans, points }) => {
+    const question = apq.find((question) => question.qid === ques_id); // find is a js function to search for an element in an array
+    if (question.ans === ans) {
       // update the points of the team if the answer matches correctly
       const newap = user.ap + points;
       const newcp = user.cp + 0;
       updateUser(newap, newcp);
-      props.showAlert("success",`${points} Armypoints added successfuly`);
+      props.showAlert("success", `${points} Armypoints added successfuly`);
+    }
+    else{
+      props.showAlert("danger", `Wrong Answer`);
     }
   }
   const [text, setText] = useState("")
@@ -31,11 +37,14 @@ const ArmyPoint = (props) => {
     setText(text)
   }
   useEffect(() => {
-    if (!localStorage.getItem('token')){
-      navigate('/login')
+    if (!localStorage.getItem('token')) {
+      navigate('/login');
+    }
+    else {
+      getapq();
     }
   }, [])
-  
+
   return (
     <div className="ArmyPoint">
       <div className="ap-box">
@@ -45,26 +54,26 @@ const ArmyPoint = (props) => {
               <div className='carousel-content d-flex justify-content-center align-items-baseline'>
                 <div className='carousel-subcontent question-section'>
                   <div className="question">
-                    <p className="question-pallete">{questions[0].qid}.{questions[0].ques}</p>
+                    <p className="question-pallete">{apq[0].qid}.{apq[0].ques}</p>
                     <div style={{ backgroundColor: "rgba(255,255,255,0.3)", height: "3rem", borderRadius: ".5rem" }}>
-                      <p className="points-pallete">Pts. {questions[0].pts}</p>
+                      <p className="points-pallete">Pts. {apq[0].pts}</p>
                     </div>
                   </div>
                   <textarea name="answer" id="answer" rows="5" value={text} onChange={onChange} placeholder='Write your answer here'></textarea>
                   <div style={{ width: "75%", marginTop: ".5rem" }}>
-                  <button className="btn btn-danger me-3" style={{ width: "40%" }} onClick={clearText}>Clear</button>
+                    <button className="btn btn-danger me-3" style={{ width: "40%" }} onClick={clearText}>Clear</button>
                     <button className="btn btn-success" style={{ width: "40%" }} onClick={() => {
-                            handleSubmitClick();
-                            updatePoints({ques_id:questions[0].qid,ans:text,points:questions[0].pts});
-                            clearText();
-                          }} >Submit</button>
-                  </div>                
+                      handleSubmitClick();
+                      updatePoints({ ques_id: apq[0].qid, ans: text, points: apq[0].pts });
+                      clearText();
+                    }} >Submit</button>
+                  </div>
                 </div>
               </div>
             </div>
 
             { // eslint-disable-next-line
-              questions.map((ele, index) => {
+              apq.map((ele, index) => {
                 if (index !== 0) {
                   return <div className="carousel-item" key={index}>
                     <div className='carousel-content d-flex justify-content-center align-items-baseline'>
@@ -79,8 +88,9 @@ const ArmyPoint = (props) => {
                         <div style={{ width: "75%", marginTop: ".5rem" }}>
                           <button className="btn btn-danger me-3" style={{ width: "40%" }} onClick={clearText}>Clear</button>
                           <button className="btn btn-success" style={{ width: "40%" }} onClick={() => {
+                            console.log(ele.pts);
                             handleSubmitClick();
-                            updatePoints({ques_id:ele.qid,ans:text,points:ele.pts});
+                            updatePoints({ ques_id: ele.qid, ans: text, points: ele.pts });
                             clearText();
                           }} >Submit</button>
                         </div>
