@@ -39,9 +39,11 @@ const ArmyPoint = (props) => {
   useEffect(() => {
     if (!localStorage.getItem('token')) {
       navigate('/login');
+      // eslint-disable-next-line
     }
     else {
       getapq();
+      // eslint-disable-next-line
     }
   }, [])
 
@@ -88,7 +90,6 @@ const ArmyPoint = (props) => {
                         <div style={{ width: "75%", marginTop: ".5rem" }}>
                           <button className="btn btn-danger me-3" style={{ width: "40%" }} onClick={clearText}>Clear</button>
                           <button className="btn btn-success" style={{ width: "40%" }} onClick={() => {
-                            console.log(ele.pts);
                             handleSubmitClick();
                             updatePoints({ ques_id: ele.qid, ans: text, points: ele.pts });
                             clearText();

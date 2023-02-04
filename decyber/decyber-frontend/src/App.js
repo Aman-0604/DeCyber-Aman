@@ -15,6 +15,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import ScoreboardState from './context/scoreboard/ScoreboardState';
 
 function App() {
   const [alert, setAlert] = useState(null)
@@ -37,6 +38,7 @@ function App() {
     // all under JSX fragment(<> & </>) as we need to pass only one element in the return();
     <>
       <UserState>
+        <ScoreboardState>
         <ArmyState>
           <BrowserRouter>
             <Alert alert={alert} />
@@ -51,6 +53,7 @@ function App() {
             </Routes>
           </BrowserRouter>
         </ArmyState>
+        </ScoreboardState>
       </UserState>
     </>
   );
