@@ -14,7 +14,7 @@
     margin: auto;
     width: 80vw;
     height: 25rem;
-    background-color: #02353ebd;
+    background-color: #01424dbd;
     border-radius: 2rem;
 }
 .carousel-content *{
@@ -34,7 +34,7 @@
     padding: .5rem;
 }
 .question-section textarea:focus{
-    outline: 1px solid lightgreen;
+    outline: 1px solid rgb(126, 255, 126);
     caret-color: cyan;
     font-weight: 400;
     color: white;
@@ -45,11 +45,11 @@
     padding-right: 1rem;
 }
 .question-pallete{
-    color: lightgreen;
+    color: rgb(36, 161, 214);
 }
 .question .points-pallete{
     width: 8rem;
-    background-image: linear-gradient(70deg,lightgreen,lightseagreen);
+    background-image: linear-gradient(70deg,rgb(6, 220, 232),rgb(40, 216, 4));
     /* background-color: rgba(255,255,255,0.3); */
     background-clip: text;
     color: transparent;

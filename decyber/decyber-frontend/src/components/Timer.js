@@ -6,7 +6,6 @@ const Timer = ({ expiryTimestamp }) => {
         seconds,
         minutes,
         hours,
-        isRunning
     } = useTimer({ expiryTimestamp, onExpire: () => console.warn('onExpire called') });
     // localStorage.setItem('time',JSON.stringify({hours:hours,minutes:minutes,seconds:seconds}));
     return (

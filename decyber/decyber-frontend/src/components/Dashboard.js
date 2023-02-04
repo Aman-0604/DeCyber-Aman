@@ -17,6 +17,7 @@ export default function Dashboard({time}) {
       navigate('/login')
     }
     else{
+      //eslint-disable-next-line
       getUser();
     }
   }, [])
