@@ -20,8 +20,17 @@
     transition: 0.6s;
     cursor: pointer;
 }
-.chosen-countries path{
-    fill: lightgoldenrodyellow;
-    stroke: #eee;
+.capturable path{
+    fill: rgb(37, 219, 47);
+    stroke: #000000;
     stroke-width: .25;
+}
+.danger path{
+    fill:crimson;
+}
+.team-country path{
+    fill: rgb(0, 106, 255);
+}
+.WorldMap .labels{
+    color: darkturquoise;
 }

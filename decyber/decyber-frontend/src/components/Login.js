@@ -36,20 +36,20 @@ export default function Login(props) {
     }
     return (
         <div className='Login'>
-            <div className='container' style={{ width: "50%" }}>
+            <div className='container login_form' style={{ width: "50%" }}>
                 <form onSubmit={submitHandler}>
                     <div className="mb-3">
                         <label htmlFor="exampleInputEmail1" className="form-label" style={{ color: "white" }}><h3>Team Name</h3> </label>
-                        <input type="team_name" className="form-control" name="team_name" id="team_name" aria-describedby="emailHelp" value={credentials.team_name} onChange={onChange} />
+                        <input type="text" className="form-control" name="team_name" id="team_name" aria-describedby="emailHelp" value={credentials.team_name} onChange={onChange} />
                     </div>
-                    <div className="mb-3">
+                    <div className="mb-3 team-password">
                         <label htmlFor="exampleInputPassword1" className="form-label" style={{ color: "white" }} ><h3>Team Password</h3></label>
-                        <input type="team_password" className="form-control" name="team_password" id="team_password" value={credentials.team_password} onChange={onChange} />
+                        <input type="password" className="form-control" name="team_password" id="team_password" value={credentials.team_password} onChange={onChange} />
                     </div>
-                    <button type="submit" className="btn btn-primary" style={{ backgroundColor: "#212529", color: "#3D6343", border: "none" }}>Login</button>
-                    <hr style={{ color: '#3D6343' }} />
+                    <button type="submit" className="btn btn-primary" style={{ backgroundColor: "#212529", color: "cyan", border: "none" }}>Login</button>
+                    <hr style={{ color: 'white' }} />
                     <div className='form-text mt-3'><p> New to DeCyber ?</p></div>
-                    <Link to="/signup"><button type="submit" className="btn btn-primary my-3" style={{ backgroundColor: "#212529", color: "#3D6343", border: "none" }}>Signup</button></Link>
+                    <Link to="/signup"><button type="submit" className="btn btn-primary my-3" style={{ backgroundColor: "#212529", color: "lightgreen", border: "none" }}>Signup</button></Link>
                 </form>
             </div>
         </div>
