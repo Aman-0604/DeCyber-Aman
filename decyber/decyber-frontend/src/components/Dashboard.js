@@ -1,55 +1,44 @@
-import React,{useContext,useEffect} from 'react'
+import React, { useContext,useState, useEffect } from 'react'
 import userContext from '../context/users/userContext';
 import "../styles/dashboard.css"
 import { Avatar } from '../icons';
 import Timer from './Timer';
 import { useNavigate } from 'react-router-dom';
+import scoreboardContext from '../context/scoreboard/scoreboardContext';
 
-export default function Dashboard({time}) {
-  
+export default function Dashboard({ time }) {
   let navigate = useNavigate();
   const user_detail = useContext(userContext);
-  const { user, getUser } = user_detail;
-  const array = [{ rank: 1, name: "India", points: 2500 }, { rank: 1, name: "India", points: 2500 }, { rank: 1, name: "India", points: 2500 }]
-
+  const { user, getUser} = user_detail;
+  const scoreboard = useContext(scoreboardContext);
+  const { usersScores, getScores} = scoreboard;
+  const [array, setArray] = useState([])
+  const rankCalculator = ()=>{
+    setArray(()=>{
+      let list = usersScores.sort(({cp:a},{cp:b})=> b - a);
+      list.map((ele,index)=>{
+        ele["rank"] = index+1;
+        return ele;
+      })
+      return list;
+    })
+  }
   useEffect(() => {
-    if (!localStorage.getItem('token')){
+    if (!localStorage.getItem('token')) {
       navigate('/login')
-    }
-    else{
       //eslint-disable-next-line
+    }
+    else {
       getUser();
+      getScores();
+      rankCalculator();
+      //eslint-disable-next-line
     }
   }, [])
   return (
     <>
-      {/* <div className='Dashboard'>
-        <h1 style={{textAlign:"center"}}>{user.team}</h1>
-        <div className="dashboard-outlier d-flex justify-content-center align-items-center">
-            <div className="outlier-2 d-flex flex-column justify-content-center align-items-center">
-              <div className="user-status">
-                  <p>Your status</p>
-                  <p>Army Points : {user.ap}</p>
-                  <p>Country Points : {user.cp}</p>
-              </div>
-              <div className="outlier-3 d-flex flex-row justify-content-center align-items-center">
-                  <div className="member-details">
-                      <p>{user.name}</p>
-                      <p>{user.email}</p>
-                      <p>{user.college}</p>
-                  </div>
-                  <div className="remaining-time">
-                      Time Left
-                  </div>
-              </div>
-            </div>
-            <div className="scoreboard">
-                Scoreboard
-            </div>
-        </div>
-      </div> */}
       <div className='Dashboard'>
-        <h1 style={{ textAlign: "center", margin: "1rem 0",color:"lightgreen" }}>{user.team_name}</h1>
+        <h1 style={{ textAlign: "center", margin: "1rem 0", color: "lightgreen" }}>{user.team_name}</h1>
         <div className="dashboard-outlier d-flex justify-content-center align-items-center">
           <div className="outlier-2 d-flex flex-column justify-content-center align-items-center" >
             <div className="user-status">
@@ -113,8 +102,8 @@ export default function Dashboard({time}) {
               <div className="remaining-time">
                 <div className="timer">
                   <div className="timer-display">
-                    <Timer expiryTimestamp={time} style={{background: "transparent",color: "white",marginRight: ".2rem"}}/>
-                    <p style={{color:"white",fontWeight:"500"}}>hrs</p>
+                    <Timer expiryTimestamp={time} style={{ background: "transparent", color: "white", marginRight: ".2rem" }} />
+                    <p style={{ color: "white", fontWeight: "500" }}>hrs</p>
                   </div>
                 </div>
               </div>
@@ -129,11 +118,11 @@ export default function Dashboard({time}) {
                     <th>Name</th>
                     <th>Points</th>
                   </tr>
-                  {array.map((ele,index) => {
+                  {array.map((ele, index) => {
                     return <tr key={index}>
                       <td>{ele.rank}</td>
-                      <td>{ele.name}</td>
-                      <td>{ele.points}</td>
+                      <td>{ele.team_name}</td>
+                      <td>{ele.cp}</td>
                     </tr>
                   })}
                 </tbody>

@@ -19,7 +19,6 @@ const UserState = (props) => {
     });
     const json = await response.json();
     setUser(json);
-    console.log(user.ap);
 
   }
 
@@ -36,7 +35,6 @@ const UserState = (props) => {
       body: JSON.stringify({ ap, cp })
     });
     const json = await response.json();
-    console.log(json);
     const newUser = json;
 
     // Logic to update

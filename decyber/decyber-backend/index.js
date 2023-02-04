@@ -12,6 +12,7 @@ app.use(express.json());
 
 // Available Routes
 app.use('/api/auth',require('./routes/auth'));
+app.use('/api/scoreboard',require('./routes/scoreboard'));
 app.use('/api/ap_questions',require('./routes/ap_questions'));
 app.use('/api/cp_questions',require('./routes/cp_questions'));
 

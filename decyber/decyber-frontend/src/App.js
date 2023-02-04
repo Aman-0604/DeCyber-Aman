@@ -16,6 +16,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import ScoreboardState from './context/scoreboard/ScoreboardState';
 
 function App() {
   const [alert, setAlert] = useState(null)
@@ -40,6 +41,7 @@ function App() {
       <UserState>
         <CountryState>
           <ArmyState>
+           <ScoreboardState>
             <BrowserRouter>
               <Alert alert={alert} />
               <Navbar showAlert={showAlert} />
@@ -52,6 +54,7 @@ function App() {
                 <Route exact path="/signup" element={<Signup showAlert={showAlert} />} />
               </Routes>
             </BrowserRouter>
+           </ScoreboardState>
           </ArmyState>
         </CountryState>
       </UserState>

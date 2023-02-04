@@ -12,10 +12,11 @@ const WorldMap = () => {
 
   useEffect(() => {
     if (localStorage.getItem('token')) {
-      console.log(localStorage.getItem('token'));
+      // eslint-disable-next-line
       getUser();
     }
     else {
+      // eslint-disable-next-line
       navigate("/login");
     }
     // eslint-disable-next-line
