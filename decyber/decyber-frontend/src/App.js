@@ -9,6 +9,7 @@ import Signup from './components/Signup';
 import UserState from './context/users/UserState';
 import ArmyState from './context/army_questions/ArmyState';
 import CountryState from './context/country_questions/CountryState';
+import ScoreboardState from './context/scoreboard/ScoreboardState';
 import Alert from "./components/Alert";
 import React, { useState } from 'react'
 import {
@@ -16,10 +17,9 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import ScoreboardState from './context/scoreboard/ScoreboardState';
 
 function App() {
-  const [alert, setAlert] = useState(null)
+  const [alert, setAlert] = useState(null);
   const showAlert = (type, display) => {
     setAlert({
       theme: type,
@@ -41,20 +41,20 @@ function App() {
       <UserState>
         <CountryState>
           <ArmyState>
-           <ScoreboardState>
-            <BrowserRouter>
-              <Alert alert={alert} />
-              <Navbar showAlert={showAlert} />
-              <Routes>
-                <Route exact path="/" element={<WorldMap />} />
-                <Route exact path="/ap" element={<ArmyPoint showAlert={showAlert} />} />
-                <Route exact path="/cp/:country" element={<CountryPoint showAlert={showAlert} />} />
-                <Route exact path="/dashboard" element={<Dashboard time={time} />} />
-                <Route exact path="/login" element={<Login showAlert={showAlert} />} />
-                <Route exact path="/signup" element={<Signup showAlert={showAlert} />} />
-              </Routes>
-            </BrowserRouter>
-           </ScoreboardState>
+            <ScoreboardState>
+              <BrowserRouter>
+                <Alert alert={alert} />
+                <Navbar showAlert={showAlert} />
+                <Routes>
+                  <Route exact path="/" element={<WorldMap />} />
+                  <Route exact path="/ap" element={<ArmyPoint showAlert={showAlert} />} />
+                  <Route exact path="/cp/:country" element={<CountryPoint showAlert={showAlert} />} />
+                  <Route exact path="/dashboard" element={<Dashboard time={time} />} />
+                  <Route exact path="/login" element={<Login showAlert={showAlert} />} />
+                  <Route exact path="/signup" element={<Signup showAlert={showAlert} />} />
+                </Routes>
+              </BrowserRouter>
+            </ScoreboardState>
           </ArmyState>
         </CountryState>
       </UserState>

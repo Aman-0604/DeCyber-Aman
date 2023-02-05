@@ -29,6 +29,21 @@ const ArmyState = (props) => {
         console.log(apq[0].ques);
         console.log(apq.length);
     }
+    // Get single army questions
+    const getsingleapq = async (qid) => {
+        // API Call
+        let url = `${host}/api/ap_questions/fetchsingleap_questions/${qid}`;
+        const response = await fetch(url, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "auth-token": localStorage.getItem("token")
+            }
+        });
+        const json = await response.json();
+        console.log(json);
+        return json[0];
+    }
     // Update army question
     const updateapq = async (qid, type) => {
         // API Calls
@@ -57,7 +72,7 @@ const ArmyState = (props) => {
     }
 
     return (
-        <ArmyContext.Provider value={{ apq, getapq, updateapq }}>
+        <ArmyContext.Provider value={{ apq, getapq, getsingleapq, updateapq }}>
             {props.children}
         </ArmyContext.Provider>
     )

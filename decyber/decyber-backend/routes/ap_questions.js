@@ -14,6 +14,16 @@ router.get('/fetchAllap_questions', fetch_user, async (req, res) => {
         res.status(500).send("Internal Server Error");
     }
 })
+// Route 2 : Get all the Army_questions using : GET "/api/ap_questions/fetchAllap_questions". Login required
+router.get('/fetchsingleap_questions/:qid', fetch_user, async (req, res) => {
+    try {
+        const army_questions = await Army_questions.find({ qid: req.params.qid });
+        res.json(army_questions);
+    } catch (error) {
+        console.error(error.message);
+        res.status(500).send("Internal Server Error");
+    }
+})
 
 // Route 2 : Update user details using : PUT "/api/ap_questions/updateAPQ". Login required
 router.put('/updateAPQ', fetch_user, async (req, res) => {

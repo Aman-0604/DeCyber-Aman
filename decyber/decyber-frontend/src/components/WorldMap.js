@@ -27,6 +27,7 @@ const WorldMap = () => {
         <h5 >Your team <div style={{width:"1rem",height:"1rem",backgroundColor:'rgb(0, 106, 255)',display:"inline-block"}}></div></h5>
         <h5 >Capturable countries <div style={{width:"1rem",height:"1rem",backgroundColor:'rgb(37, 219, 47)',display:"inline-block"}}></div></h5>
         <h5 >Not enough AP to Capture <div style={{width:"1rem",height:"1rem",backgroundColor:'crimson',display:"inline-block"}}></div></h5>
+        <h5 >Not participating <div style={{width:"1rem",height:"1rem",backgroundColor:'#00394f',display:"inline-block"}}></div></h5>
       </div>
       <World armypoints={user.ap} team={user.team_name}/>
     </div>
