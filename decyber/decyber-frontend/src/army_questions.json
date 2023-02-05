@@ -19,5 +19,40 @@
         "ques": "What happend at Tienmann Square?",
         "pts": 500,
         "ans": "nothing"
+    },
+    {
+        "type": 0,
+        "qid": 4,
+        "ques": "2+3=?",
+        "pts": 200,
+        "ans": "5"
+    },
+    {
+        "type": 0,
+        "qid": 5,
+        "ques": "2+5=?",
+        "pts": 200,
+        "ans": "7"
+    },
+    {
+        "type": 0,
+        "qid": 6,
+        "ques": "3+5=?",
+        "pts": 200,
+        "ans": "8"
+    },
+    {
+        "type": 0,
+        "qid": 7,
+        "ques": "6+5=?",
+        "pts": 200,
+        "ans": "11"
+    },
+    {
+        "type": 0,
+        "qid": 8,
+        "ques": "12+5=?",
+        "pts": 200,
+        "ans": "17"
     }
 ]

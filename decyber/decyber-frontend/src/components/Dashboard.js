@@ -21,7 +21,7 @@ export default function Dashboard({ time }) {
         return ele;
       })
       return list;
-    })
+    });
   }
   useEffect(() => {
     if (!localStorage.getItem('token')) {
@@ -86,16 +86,6 @@ export default function Dashboard({ time }) {
                     <p className="name">{user.team_member_1}</p>
                     <p className="designation">{user.team_member_1_email}</p>
                     <p className="designation">{user.team_member_1_college}</p>
-                  </div>
-                </div>
-                <div className="member">
-                  <div className="avatar">
-                    <Avatar />
-                  </div>
-                  <div className="basic-info">
-                    <p className="name">{user.team_member_2}</p>
-                    <p className="designation">{user.team_member_2_email}</p>
-                    <p className="designation">{user.team_member_2_college}</p>
                   </div>
                 </div>
               </div>

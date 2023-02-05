@@ -30,21 +30,10 @@ const UserSchema = new Schema({
     },
     team_member_1_email: {
         type: String,
-        default:"No email"
+        required: true,
+        unique: true
     },
     team_member_1_college: {
-        type: String,
-        default:"No clg"
-    },
-    team_member_2: {
-        type: String,
-        default: "Member 2 not selected"
-    },
-    team_member_2_email: {
-        type: String,
-        default:"No email"
-    },
-    team_member_2_college: {
         type: String,
         default:"No clg"
     },

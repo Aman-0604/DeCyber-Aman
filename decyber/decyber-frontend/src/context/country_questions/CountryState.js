@@ -16,7 +16,6 @@ const CountryState = (props) => {
     // Get all country questions
     const getcpq = async (country) => {
         // API Call
-        console.log(country);
         let url = `${host}/api/cp_questions/fetchcp_question/${country}`;
         const response = await fetch(url, {
             method: "GET",
@@ -27,9 +26,21 @@ const CountryState = (props) => {
         });
         const json = await response.json();
         setCpq(json);
-        console.log(cpq);
-        // console.log(cpq[0].ques);
-        // console.log(cpq.length);
+        return json[0];
+    }
+    // Get single country question
+    const getsinglecpq = async (country) => {
+        // API Call
+        let url = `${host}/api/cp_questions/fetchsinglecp_question/${country}`;
+        const response = await fetch(url, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "auth-token": localStorage.getItem("token")
+            }
+        });
+        const json = await response.json();
+        return json[0];
     }
     // Update country question
     const updatecpq = async (code, type) => {
@@ -44,7 +55,6 @@ const CountryState = (props) => {
             body: JSON.stringify({ code, type })
         });
         const json = await response.json();
-        console.log("updated", json);
 
         let newCPQ = JSON.parse(JSON.stringify(cpq));
         // Logic to update
@@ -59,7 +69,7 @@ const CountryState = (props) => {
     }
 
     return (
-        <CountryContext.Provider value={{ cpq, getcpq, updatecpq }}>
+        <CountryContext.Provider value={{ cpq, getcpq,getsinglecpq, updatecpq }}>
             {props.children}
         </CountryContext.Provider>
     )

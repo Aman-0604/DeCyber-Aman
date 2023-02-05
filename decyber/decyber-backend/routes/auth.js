@@ -22,9 +22,6 @@ router.post('/createUser', [
     body('team_member_1', 'Enter a valid name').isLength({ min: 5 }),
     body('team_member_1_email', 'Enter a valid email').isEmail(),
     body('team_member_1_college', 'College must be atleast 3 characters').isLength({ min: 3 }),
-    body('team_member_2', 'Enter a valid name').isLength({ min: 5 }),
-    body('team_member_2_email', 'Enter a valid email').isEmail(),
-    body('team_member_2_college', 'College must be atleast 3 characters').isLength({ min: 3 }),
 ], async (req, res) => {
     // Finds the validation errors in this request and wraps them in an object with handy functions
     const errors = validationResult(req);
@@ -49,10 +46,7 @@ router.post('/createUser', [
             team_leader_college: req.body.team_leader_college,
             team_member_1: req.body.team_member_1,
             team_member_1_email: req.body.team_member_1_email,
-            team_member_1_college: req.body.team_member_1_college,
-            team_member_2: req.body.team_member_2,
-            team_member_2_email: req.body.team_member_2_email,
-            team_member_2_college: req.body.team_member_2_college,
+            team_member_1_college: req.body.team_member_1_college
         })
         const data = {//accessing data by using object id because it will be the fastest access
             user: {
@@ -61,8 +55,6 @@ router.post('/createUser', [
         }
         success = true;
         const auth_token = jwt.sign(data, JWT_Secret);
-        // console.log(jwtData);
-        // res.json(user)
         res.json({ success, auth_token });
 
 

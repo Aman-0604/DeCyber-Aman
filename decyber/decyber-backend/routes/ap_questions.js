@@ -25,7 +25,7 @@ router.get('/fetchsingleap_questions/:qid', fetch_user, async (req, res) => {
     }
 })
 
-// Route 2 : Update user details using : PUT "/api/ap_questions/updateAPQ". Login required
+// Route 3 : Update user details using : PUT "/api/ap_questions/updateAPQ". Login required
 router.put('/updateAPQ', fetch_user, async (req, res) => {
     try {
 

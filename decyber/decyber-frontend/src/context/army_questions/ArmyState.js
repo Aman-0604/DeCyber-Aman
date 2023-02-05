@@ -25,9 +25,6 @@ const ArmyState = (props) => {
         });
         const json = await response.json();
         setApq(json);
-        console.log(apq);
-        console.log(apq[0].ques);
-        console.log(apq.length);
     }
     // Get single army questions
     const getsingleapq = async (qid) => {
@@ -41,7 +38,6 @@ const ArmyState = (props) => {
             }
         });
         const json = await response.json();
-        console.log(json);
         return json[0];
     }
     // Update army question
@@ -57,7 +53,6 @@ const ArmyState = (props) => {
             body: JSON.stringify({ qid, type })
         });
         const json = await response.json();
-        console.log("updated", json);
 
         let newAPQ = JSON.parse(JSON.stringify(apq));
         // Logic to update

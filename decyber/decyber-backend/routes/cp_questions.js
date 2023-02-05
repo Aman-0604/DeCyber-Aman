@@ -7,16 +7,25 @@ const Country_questions = require('../models/Country_questions');
 // Route 1 : Get all the Country_questions using : GET "/api/cp_questions/fetchcp_question". Login required
 router.get('/fetchcp_question/:country', fetch_user, async (req, res) => {
     try {
-        const country_questions = await Country_questions.find({ name: req.params.country });
-        if(country_questions[0].type) return res.status(404).send('Not Found');
-        res.json(country_questions);
+        const country_question = await Country_questions.find({ name: req.params.country });
+        res.json(country_question);
+    } catch (error) {
+        console.error(error.message);
+        res.status(500).send("Internal Server Error");
+    }
+})
+// Route 2 : Get single Country_question using : GET "/api/cp_questions/fetchcp_question". Login required
+router.get('/fetchsinglecp_question/:country', fetch_user, async (req, res) => {
+    try {
+        const country_question = await Country_questions.find({ name: req.params.country });
+        res.json(country_question);
     } catch (error) {
         console.error(error.message);
         res.status(500).send("Internal Server Error");
     }
 })
 
-// Route 2 : Update user details using : PUT "/api/cp_questions/updateCPQ". Login required
+// Route 3 : Update user details using : PUT "/api/cp_questions/updateCPQ". Login required
 router.put('/updateCPQ', fetch_user, async (req, res) => {
     try {
 

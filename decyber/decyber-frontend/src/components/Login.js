@@ -22,7 +22,6 @@ export default function Login(props) {
             body: JSON.stringify({ team_name: credentials.team_name, team_password: credentials.team_password })//will convert the object into type JSON
         });
         const json = await response.json();
-        //   console.log(json);
         if (json.success) {
             props.showAlert("success", "Login Successful");
             //save the auth token and redirect

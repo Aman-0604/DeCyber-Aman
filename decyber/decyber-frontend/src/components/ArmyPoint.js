@@ -10,22 +10,25 @@ const ArmyPoint = (props) => {
   const { user, getUser, updateUser } = user_detail;
 
   const army_detail = useContext(armyContext);
-  const { apq, getapq,getsingleapq, updateapq } = army_detail;
+  const { apq, getapq, getsingleapq, updateapq } = army_detail;
 
-  const updatePoints = async({ ques_id, ans, points }) => {
+  const updatePoints = async ({ ques_id, ans, points }) => {
     const question = apq.find((question) => question.qid === ques_id); // find is a js function to search for an element in an array
-    const questionTemp=await getsingleapq(question.qid);
-    if(questionTemp.type){
-      props.showAlert("danger","someone has done it earlier");
-      return ;
+    const updatedQuestion = await getsingleapq(question.qid); //fetching fresh question from the backend
+    if (updatedQuestion.type) {
+      props.showAlert("danger", "Someone has done it earlier");
+      return;
     }
-    if (questionTemp.ans === ans.trim().toLowerCase()) {
+    if (updatedQuestion.ans === ans.trim().toLowerCase()) {
       // update the points of the team if the answer matches correctly
-      const newap = user.ap + questionTemp.pts;
+      const newap = user.ap + points;
       const newcp = user.cp + 0;
       updateUser(newap, newcp);
       props.showAlert("success", `${points} Armypoints added successfully`);
-      updateapq(questionTemp.qid, 1);
+      updateapq(updatedQuestion.qid, 1);
+      setTimeout(() => {
+        window.location.reload();
+      }, 2000);
     }
     else {
       props.showAlert("danger", `Wrong Answer`);
@@ -38,11 +41,6 @@ const ArmyPoint = (props) => {
   }
   const clearText = () => {
     setText("");
-  }
-  const handleSubmitClick = () => {
-    // setText(text);
-    // updatePoints({ ques_id: ele.qid, ans: text, points: ele.pts });
-    // clearText();
   }
   useEffect(() => {
     if (!localStorage.getItem('token')) {
@@ -61,10 +59,10 @@ const ArmyPoint = (props) => {
         <div id="carouselExample" className="carousel slide">
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <div className='carousel-content d-flex justify-content-center align-items-baseline'>
+              {apq.length && <div className='carousel-content d-flex justify-content-center align-items-baseline'>
                 <div className='carousel-subcontent question-section'>
                   <div className="question">
-                    <p className="question-pallete">{apq[0].qid}.{apq[0].ques}</p>
+                    <p className="question-pallete">{apq[0].qid}. {apq[0].ques}</p>
                     <div style={{ backgroundColor: "rgba(255,255,255,0.3)", height: "3rem", borderRadius: ".5rem" }}>
                       <p className="points-pallete">Pts. {apq[0].pts}</p>
                     </div>
@@ -73,24 +71,22 @@ const ArmyPoint = (props) => {
                   <div style={{ width: "75%", marginTop: ".5rem" }}>
                     <button className="btn btn-danger me-3" style={{ width: "40%" }} onClick={clearText}>Clear</button>
                     <button className="btn btn-success" style={{ width: "40%" }} onClick={() => {
-                      handleSubmitClick();
                       updatePoints({ ques_id: apq[0].qid, ans: text, points: apq[0].pts });
-                      getapq();
-                      clearText();
                     }} >Submit</button>
                   </div>
                 </div>
-              </div>
+              </div>}
             </div>
 
             { // eslint-disable-next-line
-              apq.map((ele, index) => {
+
+              apq.length && apq.map((ele, index) => {
                 if (index !== 0) {
                   return <div className="carousel-item" key={index}>
                     <div className='carousel-content d-flex justify-content-center align-items-baseline'>
                       <div className='carousel-subcontent question-section'>
                         <div className="question">
-                          <p className="question-pallete">{ele.qid}.{ele.ques}</p>
+                          <p className="question-pallete">{ele.qid}. {ele.ques}</p>
                           <div style={{ backgroundColor: "rgba(255,255,255,0.3)", height: "3rem", borderRadius: ".5rem" }}>
                             <p className="points-pallete">Pts. {ele.pts}</p>
                           </div>
@@ -106,7 +102,9 @@ const ArmyPoint = (props) => {
                     </div>
                   </div>
                 }
-              })}
+              })
+            }
+
           </div>
           <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
