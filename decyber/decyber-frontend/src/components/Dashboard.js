@@ -23,6 +23,7 @@ export default function Dashboard({ time }) {
       return list;
     });
   }
+  const myrank = (array.length!==0)?array.find((ele)=>ele.team_name===user.team_name).rank:0;
   useEffect(() => {
     if (!localStorage.getItem('token')) {
       navigate('/login')
@@ -60,8 +61,8 @@ export default function Dashboard({ time }) {
               </div>
               <div className="rank db-props">
                 <div className="rank-props">
-                  <h4>1st</h4>
-                  <p>of 2500 Users</p>
+                  <h4>{array.length && myrank.toString()}{myrank!==1?(myrank!==2?((myrank!==3)?"th":"rd"):"nd"):"st"}</h4>
+                  <p>of {array.length} users</p>
                 </div>
               </div>
             </div>
