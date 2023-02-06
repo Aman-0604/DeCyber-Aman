@@ -75,7 +75,7 @@ const CountryPoint = (props) => {
               updatePoints({ ans: text, points: cpq[0].pts });
             }} >Submit</button>
           </div>
-        </div> : <div>Someone has done it earlier.</div>}
+        </div> : <div className='question-pallete' style={{fontSize:'30px'}}>Someone has done it earlier.</div>}
       </div>
     </div>
   );

@@ -60,10 +60,10 @@ const ArmyPoint = (props) => {
         <div id="carouselExample" className="carousel slide">
           <div className="carousel-inner">
             <div className="carousel-item active">
-              {apq.length && <div className='carousel-content d-flex justify-content-center align-items-baseline'>
-                <div className='carousel-subcontent question-section'>
+              <div className='carousel-content d-flex justify-content-center align-items-baseline'>
+              {apq.length ? <div className='carousel-subcontent question-section'>
                   <div className="question">
-                    <p className="question-pallete">{apq[0].qid}. {apq[0].ques}</p>
+                    <p className="question-pallete" dangerouslySetInnerHTML={{ __html: apq[0].ques }}></p>
                     <div style={{ backgroundColor: "rgba(255,255,255,0.3)", height: "3rem", borderRadius: ".5rem" }}>
                       <p className="points-pallete">Pts. {apq[0].pts}</p>
                     </div>
@@ -75,8 +75,8 @@ const ArmyPoint = (props) => {
                       updatePoints({ ques_id: apq[0].qid, ans: text, points: apq[0].pts });
                     }} >Submit</button>
                   </div>
-                </div>
-              </div>}
+                </div> : <div className='carousel-subcontent question-section question-pallete text-center' style={{marginTop:"175px"}}> All Army Points has been looted.</div>}
+              </div>
             </div>
 
             { // eslint-disable-next-line
@@ -87,7 +87,7 @@ const ArmyPoint = (props) => {
                     <div className='carousel-content d-flex justify-content-center align-items-baseline'>
                       <div className='carousel-subcontent question-section'>
                         <div className="question">
-                          <p className="question-pallete">{ele.qid}. {ele.ques}</p>
+                          <p className="question-pallete" dangerouslySetInnerHTML={{ __html: ele.ques }}></p>
                           <div style={{ backgroundColor: "rgba(255,255,255,0.3)", height: "3rem", borderRadius: ".5rem" }}>
                             <p className="points-pallete">Pts. {ele.pts}</p>
                           </div>
