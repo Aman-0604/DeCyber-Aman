@@ -27,7 +27,8 @@ const ArmyPoint = (props) => {
       props.showAlert("success", `${points} Armypoints added successfully`);
       updateapq(updatedQuestion.qid, 1);
       setTimeout(() => {
-        window.location.reload();
+        // window.location.reload();
+        navigate('/');
       }, 2000);
     }
     else {

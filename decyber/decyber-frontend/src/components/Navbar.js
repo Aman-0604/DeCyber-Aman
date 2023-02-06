@@ -1,19 +1,21 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import { Link } from "react-router-dom";
+import userContext from '../context/users/userContext';
 
 export default function Navbar(props) {
-
+    const user_detail = useContext(userContext);
+    const { user} = user_detail;
 
     const logoutHandler = () => {
         localStorage.removeItem('token');
-        props.showAlert("success","Logout Successful");
+        props.showAlert("success", "Logout Successful");
     }
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: "#01171b" }}>
                 <div className="container-fluid">
                     <Link className="navbar-brand" to="/">
-                        <img src="../decyber.png" alt="DeCyber" width="200" height="80" className="d-inline-block align-text-top" style={{filter:"brightness(2.5)",mixBlendMode:"color-dodge"}}/>
+                        <img src="../decyber.png" alt="DeCyber" width="200" height="80" className="d-inline-block align-text-top" />
                         {/* <img src="../invictus.png" alt="DeCyber" width="120" height="50" className="d-inline-block align-text-top" /> */}
                     </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,7 +27,7 @@ export default function Navbar(props) {
                                 <Link className="nav-link active" aria-current="page" to="/" style={{ color: "cyan", fontSize: "20px", fontWeight: "600" }}>Home</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link active" to="/ap" style={{ color: "cyan", fontSize: "20px", fontWeight: "600" }}>AP</Link>
+                                <Link className="nav-link active" to="/ap" style={{ color: "cyan", fontSize: "20px", fontWeight: "600" }}>AP <sup style={{ color: "cyan", fontWeight: "600" }}>{user.ap}</sup></Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link active" to="/dashboard" style={{ color: "cyan", fontSize: "20px", fontWeight: "600" }}>

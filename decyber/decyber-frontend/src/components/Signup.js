@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import "../styles/signup.css"
-import countries from '../countries'
 
 export default function Signup(props) {
     let navigate = useNavigate();
@@ -37,14 +36,7 @@ export default function Signup(props) {
                     <div className='team-signup'>
                         <div className="mb-3">
                             <label htmlFor="name" className="form-label" style={{ color: "aquamarine" }}><h5>Team Name</h5></label>
-                            <select type="text" className="form-control" name="team_name" id="team_name" value={credentials.team_name} onChange={onChange}>
-                                <option value="default">--select--</option>
-                                {
-                                    countries.map((ele, index) => {
-                                        return <option value={ele.name} key={index}>{ele.name}</option>
-                                    })
-                                }
-                            </select>
+                            <input type="name" className="form-control" name="team_name" id="team_name" value={credentials.team_name} onChange={onChange} />
                         </div>
                         <div className="mb-3">
                             <label htmlFor="exampleInputPassword1" className="form-label" style={{ color: "aquamarine" }}><h5>Team Password</h5></label>

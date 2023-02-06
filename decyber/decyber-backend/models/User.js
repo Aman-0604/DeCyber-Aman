@@ -26,7 +26,7 @@ const UserSchema = new Schema({
     },
     team_member_1: {
         type: String,
-        default: "Member 1 not selected"
+        required: true
     },
     team_member_1_email: {
         type: String,
@@ -35,7 +35,7 @@ const UserSchema = new Schema({
     },
     team_member_1_college: {
         type: String,
-        default:"No clg"
+        required: true
     },
     ap: {
         type: Number,
