@@ -16,7 +16,7 @@ const CountryPoint = (props) => {
   const { cpq, getcpq, getsinglecpq, updatecpq } = country_detail;
 
   const updatePoints = async ({ ans, points }) => {
-    const question = cpq[0];
+    // const question = cpq[0];
     const updatedCountryQuestion = await getsinglecpq(country); // fresh question fetched from the backend
     if (updatedCountryQuestion.type) {
       props.showAlert("danger", "Someone has done it earlier");
@@ -53,8 +53,8 @@ const CountryPoint = (props) => {
     }
     else {
       getcpq(country);
-      // eslint-disable-next-line
     }
+    // eslint-disable-next-line
   }, [])
 
   return (
@@ -75,7 +75,7 @@ const CountryPoint = (props) => {
               updatePoints({ ans: text, points: cpq[0].pts });
             }} >Submit</button>
           </div>
-        </div> : <div className='question-pallete' style={{fontSize:'30px'}}>Someone has done it earlier.</div>}
+        </div> : <div className='question-pallete' style={{fontSize:'30px'}}>Someone has captured this country before you !</div>}
       </div>
     </div>
   );

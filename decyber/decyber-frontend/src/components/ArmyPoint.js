@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 const ArmyPoint = (props) => {
   let navigate = useNavigate();
   const user_detail = useContext(userContext);
-  const { user, getUser, updateUser } = user_detail;
+  const { user, updateUser } = user_detail;
 
   const army_detail = useContext(armyContext);
   const { apq, getapq, getsingleapq, updateapq } = army_detail;
@@ -50,8 +50,8 @@ const ArmyPoint = (props) => {
     }
     else {
       getapq();
-      // eslint-disable-next-line
     }
+    // eslint-disable-next-line
   }, [])
 
   return (
@@ -80,7 +80,6 @@ const ArmyPoint = (props) => {
             </div>
 
             { // eslint-disable-next-line
-
               apq.length && apq.map((ele, index) => {
                 if (index !== 0) {
                   return <div className="carousel-item" key={index}>

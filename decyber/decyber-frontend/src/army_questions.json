@@ -9,7 +9,7 @@
     {
         "type": 0,
         "qid": 2,
-        "ques": "How old is Joe Biden?",
+        "ques": "How old is Joe<br/> Biden?",
         "pts": 100,
         "ans": "80"
     },
