@@ -10,7 +10,7 @@ const ArmyPoint = (props) => {
   const { user, updateUser } = user_detail;
 
   const army_detail = useContext(armyContext);
-  const { apq, getapq, getsingleapq, updateapq } = army_detail;
+  const { apq, getapq, getsingleapq, checkapq, updateapq } = army_detail;
 
   const updatePoints = async ({ ques_id, ans, points }) => {
     const question = apq.find((question) => question.qid === ques_id); // find is a js function to search for an element in an array
@@ -19,7 +19,7 @@ const ArmyPoint = (props) => {
       props.showAlert("danger", "Someone has done it earlier");
       return;
     }
-    if (updatedQuestion.ans === ans.trim().toLowerCase()) {
+    if (checkapq(updatedQuestion.qid, ans.trim().toLowerCase())) {
       // update the points of the team if the answer matches correctly
       const newap = user.ap + points;
       const newcp = user.cp + 0;
@@ -61,7 +61,7 @@ const ArmyPoint = (props) => {
           <div className="carousel-inner">
             <div className="carousel-item active">
               <div className='carousel-content d-flex justify-content-center align-items-baseline'>
-              {apq.length ? <div className='carousel-subcontent question-section'>
+                {apq.length ? <div className='carousel-subcontent question-section'>
                   <div className="question">
                     <p className="question-pallete" dangerouslySetInnerHTML={{ __html: apq[0].ques }}></p>
                     <div style={{ backgroundColor: "rgba(255,255,255,0.3)", height: "3rem", borderRadius: ".5rem" }}>
@@ -75,7 +75,7 @@ const ArmyPoint = (props) => {
                       updatePoints({ ques_id: apq[0].qid, ans: text, points: apq[0].pts });
                     }} >Submit</button>
                   </div>
-                </div> : <div className='carousel-subcontent question-section question-pallete text-center' style={{marginTop:"175px"}}> All Army Points has been looted.</div>}
+                </div> : <div className='carousel-subcontent question-section question-pallete text-center' style={{ marginTop: "175px" }}> All Army Points has been looted.</div>}
               </div>
             </div>
 

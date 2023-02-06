@@ -13,7 +13,7 @@ const CountryPoint = (props) => {
   const { user, updateUser } = user_detail;
 
   const country_detail = useContext(countryContext);
-  const { cpq, getcpq, getsinglecpq, updatecpq } = country_detail;
+  const { cpq, getcpq, getsinglecpq, checkcpq, updatecpq } = country_detail;
 
   const updatePoints = async ({ ans, points }) => {
     // const question = cpq[0];
@@ -22,7 +22,7 @@ const CountryPoint = (props) => {
       props.showAlert("danger", "Someone has done it earlier");
       return;
     }
-    if (updatedCountryQuestion.ans === ans.trim().toLowerCase()) {
+    if (checkcpq(updatedCountryQuestion.code, ans.trim().toLowerCase())) {
       // update the points of the team if the answer matches correctly
       const newap = user.ap + 0;
       const newcp = user.cp + points;
@@ -75,7 +75,7 @@ const CountryPoint = (props) => {
               updatePoints({ ans: text, points: cpq[0].pts });
             }} >Submit</button>
           </div>
-        </div> : <div className='question-pallete' style={{fontSize:'30px'}}>Someone has captured this country before you !</div>}
+        </div> : <div className='question-pallete' style={{ fontSize: '30px' }}>This country has been captured !</div>}
       </div>
     </div>
   );

@@ -42,6 +42,27 @@ const CountryState = (props) => {
         const json = await response.json();
         return json[0];
     }
+    // Check whether answer is correct or not from backend
+    const checkcpq = async (code, ans) => {
+        // API Call
+        let url = `${host}/api/cp_questions/checkCPQ`;
+        const response = await fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "auth-token": localStorage.getItem("token")
+            },
+            body: JSON.stringify({ code, ans })
+        });
+        const json = await response.json();
+        if (json.success) {
+            return 1;   // right answer
+        }
+        else {
+            return 0;   // wrong answer
+        }
+
+    }
     // Update country question
     const updatecpq = async (code, type) => {
         // API Calls
@@ -69,7 +90,7 @@ const CountryState = (props) => {
     }
 
     return (
-        <CountryContext.Provider value={{ cpq, getcpq,getsinglecpq, updatecpq }}>
+        <CountryContext.Provider value={{ cpq, getcpq, getsinglecpq, checkcpq, updatecpq }}>
             {props.children}
         </CountryContext.Provider>
     )

@@ -7,8 +7,7 @@ const ArmyState = (props) => {
         "type": 0,
         "qid": 0,
         "ques": "Demo?",
-        "pts": 50,
-        "ans": "nothing"
+        "pts": 50
     }]
     const [apq, setApq] = useState(apqItem);
 
@@ -40,6 +39,27 @@ const ArmyState = (props) => {
         const json = await response.json();
         return json[0];
     }
+    // Check whether answer is correct or not from backend
+    const checkapq = async (qid, ans) => {
+        // API Call
+        let url = `${host}/api/ap_questions/checkAPQ`;
+        const response = await fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "auth-token": localStorage.getItem("token")
+            },
+            body: JSON.stringify({ qid, ans })
+        });
+        const json = await response.json();
+        if (json.success) {
+            return 1;   // right answer
+        }
+        else {
+            return 0;   // wrong answer
+        }
+
+    }
     // Update army question
     const updateapq = async (qid, type) => {
         // API Calls
@@ -67,7 +87,7 @@ const ArmyState = (props) => {
     }
 
     return (
-        <ArmyContext.Provider value={{ apq, getapq, getsingleapq, updateapq }}>
+        <ArmyContext.Provider value={{ apq, getapq, getsingleapq, checkapq, updateapq }}>
             {props.children}
         </ArmyContext.Provider>
     )
