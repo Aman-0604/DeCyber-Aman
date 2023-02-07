@@ -68,6 +68,7 @@ const ArmyPoint = (props) => {
                       <p className="points-pallete">Pts. {apq[0].pts}</p>
                     </div>
                   </div>
+                  {apq[0].link!=="#" && <p className="question-pallete" style={{textAlign:"center"}}><a href={apq[0].link} rel="noreferrer" target="_blank" style={{textDecoration:"none"}}>Link</a></p>}
                   <textarea name="answer" id="answer" rows="5" value={text} onChange={onChange} placeholder='Write your answer here'></textarea>
                   <div style={{ width: "75%", marginTop: ".5rem" }}>
                     <button className="btn btn-danger me-3" style={{ width: "40%" }} onClick={clearText}>Clear</button>
@@ -91,6 +92,7 @@ const ArmyPoint = (props) => {
                             <p className="points-pallete">Pts. {ele.pts}</p>
                           </div>
                         </div>
+                        {ele.link!=="#" && <p className="question-pallete" style={{textAlign:"center"}}><a href={ele.link} rel="noreferrer" target="_blank" style={{textDecoration:"none"}}>Link</a></p>}
                         <textarea name="answer" id="answer" rows="5" value={text} onChange={onChange} placeholder='Write your answer here'></textarea>
                         <div style={{ width: "75%", marginTop: ".5rem" }}>
                           <button className="btn btn-danger me-3" style={{ width: "40%" }} onClick={clearText}>Clear</button>
