@@ -60,22 +60,22 @@ const CountryPoint = (props) => {
   return (
     <div className="CountryPoint">
       <h1 style={{ textAlign: "center", margin: "1rem 0", color: "lightgreen" }}>{country}</h1>
-      <div className='cp-content d-flex justify-content-center align-items-center'>
+      <div className='cp-content d-flex justify-content-center'>
         {!cpq[0].type ? <div className='cp-subcontent'>
           <div className="question">
-            <p className="question-pallete">{cpq[0].ques}</p>
-            <div style={{ backgroundColor: "rgba(255,255,255,0.3)", height: "3rem", borderRadius: ".5rem" }}>
+            <p className="question-pallete">Ques. {cpq[0].ques}</p>
+            <div className='points-display' style={{ backgroundColor: "rgba(255,255,255,0.3)", height: "1.8rem", borderRadius: ".5rem" }}>
               <p className="points-pallete">Pts. {cpq[0].pts}</p>
             </div>
           </div>
-          <textarea name="answer" id="answer" rows="5" value={text} onChange={onChange} placeholder='Write your answer here'></textarea>
-          <div style={{ width: "75%", marginTop: ".5rem" }}>
+          <textarea name="answer" id="answer" rows="2" value={text} onChange={onChange} placeholder='Write your answer here'></textarea>
+          <div style={{ width: "75%", marginTop: "1rem",backgroundColor:"transparent" }}>
             <button className="btn btn-danger me-3" style={{ width: "40%" }} onClick={clearText}>Clear</button>
             <button className="btn btn-success" style={{ width: "40%" }} onClick={() => {
               updatePoints({ ans: text, points: cpq[0].pts });
             }} >Submit</button>
           </div>
-        </div> : <div className='question-pallete' style={{ fontSize: '30px' }}>This country has been captured !</div>}
+        </div> : <div className='d-flex align-items-center' style={{ fontSize: '30px',backgroundColor:"transparent" }}><p className='question-pallete'>This country has been captured !</p></div>}
       </div>
     </div>
   );
