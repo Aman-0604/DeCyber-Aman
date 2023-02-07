@@ -63,14 +63,14 @@ const ArmyPoint = (props) => {
               <div className='carousel-content d-flex justify-content-center align-items-baseline'>
                 {apq.length ? <div className='carousel-subcontent question-section'>
                   <div className="question">
-                    <p className="question-pallete" dangerouslySetInnerHTML={{ __html: apq[0].ques }}></p>
-                    <div style={{ backgroundColor: "rgba(255,255,255,0.3)", height: "3rem", borderRadius: ".5rem" }}>
+                      <p className="question-pallete" id="main-ques" dangerouslySetInnerHTML={{ __html: apq[0].qid +'. '+apq[0].ques }}></p>
+                    <div className='points-display' style={{ backgroundColor: "rgba(255,255,255,0.3)", height: "1.8rem", borderRadius: ".5rem" }}>
                       <p className="points-pallete">Pts. {apq[0].pts}</p>
                     </div>
                   </div>
                   {apq[0].link!=="#" && <p className="question-pallete" style={{textAlign:"center"}}><a href={apq[0].link} rel="noreferrer" target="_blank" style={{textDecoration:"none"}}>Link</a></p>}
-                  <textarea name="answer" id="answer" rows="5" value={text} onChange={onChange} placeholder='Write your answer here'></textarea>
-                  <div style={{ width: "75%", marginTop: ".5rem" }}>
+                  <textarea name="answer" id="answer" rows="2" value={text} onChange={onChange} placeholder='Write your answer here'></textarea>
+                  <div style={{ width: "75%", marginTop: "1rem",backgroundColor:'transparent' }}>
                     <button className="btn btn-danger me-3" style={{ width: "40%" }} onClick={clearText}>Clear</button>
                     <button className="btn btn-success" style={{ width: "40%" }} onClick={() => {
                       updatePoints({ ques_id: apq[0].qid, ans: text, points: apq[0].pts });
@@ -87,14 +87,14 @@ const ArmyPoint = (props) => {
                     <div className='carousel-content d-flex justify-content-center align-items-baseline'>
                       <div className='carousel-subcontent question-section'>
                         <div className="question">
-                          <p className="question-pallete" dangerouslySetInnerHTML={{ __html: ele.ques }}></p>
-                          <div style={{ backgroundColor: "rgba(255,255,255,0.3)", height: "3rem", borderRadius: ".5rem" }}>
+                          <p className="question-pallete" id="main-ques" dangerouslySetInnerHTML={{ __html: ele.qid +'. '+ele.ques }}></p>
+                          <div className='points-display' style={{ backgroundColor: "rgba(255,255,255,0.3)", height: "1.8rem", borderRadius: ".5rem" }}>
                             <p className="points-pallete">Pts. {ele.pts}</p>
                           </div>
                         </div>
                         {ele.link!=="#" && <p className="question-pallete" style={{textAlign:"center"}}><a href={ele.link} rel="noreferrer" target="_blank" style={{textDecoration:"none"}}>Link</a></p>}
-                        <textarea name="answer" id="answer" rows="5" value={text} onChange={onChange} placeholder='Write your answer here'></textarea>
-                        <div style={{ width: "75%", marginTop: ".5rem" }}>
+                        <textarea name="answer" id="answer" rows="2" value={text} onChange={onChange} placeholder='Write your answer here'></textarea>
+                        <div style={{ width: "75%", marginTop: "1rem",backgroundColor:"transparent" }}>
                           <button className="btn btn-danger me-3" style={{ width: "40%" }} onClick={clearText}>Clear</button>
                           <button className="btn btn-success" style={{ width: "40%" }} onClick={() => {
                             updatePoints({ ques_id: ele.qid, ans: text, points: ele.pts });
