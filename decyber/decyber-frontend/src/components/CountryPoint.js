@@ -68,6 +68,7 @@ const CountryPoint = (props) => {
               <p className="points-pallete">Pts. {cpq[0].pts}</p>
             </div>
           </div>
+          {cpq[0].link!=="#" && <p className="question-pallete" style={{textAlign:"center"}}><a href={cpq[0].link} rel="noreferrer" target="_blank" style={{textDecoration:"none"}}>Link</a></p>}
           <textarea name="answer" id="answer" rows="2" value={text} onChange={onChange} placeholder='Write your answer here'></textarea>
           <div style={{ width: "75%", marginTop: "1rem",backgroundColor:"transparent" }}>
             <button className="btn btn-danger me-3" style={{ width: "40%" }} onClick={clearText}>Clear</button>
