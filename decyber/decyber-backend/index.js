@@ -17,5 +17,5 @@ app.use('/api/ap_questions',require('./routes/ap_questions'));
 app.use('/api/cp_questions',require('./routes/cp_questions'));
 
 app.listen(port, () => {
-  console.log(`tagit_backend is listening on port ${port}`)
+  console.log(`Server is listening on port ${port}`)
 })

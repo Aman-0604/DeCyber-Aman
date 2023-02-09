@@ -19,7 +19,7 @@ router.post('/createUser', [
     body('team_leader', 'Enter a valid name').isLength({ min: 3 }),
     body('team_leader_email', 'Enter a valid email').isEmail(),
     body('team_leader_college', 'College must be atleast 3 characters').isLength({ min: 3 }),
-    body('team_member_1', 'Enter a valid name').isLength({ min: 5 }),
+    body('team_member_1', 'Enter a valid name').isLength({ min: 3 }),
     body('team_member_1_email', 'Enter a valid email').isEmail(),
     body('team_member_1_college', 'College must be atleast 3 characters').isLength({ min: 3 }),
 ], async (req, res) => {

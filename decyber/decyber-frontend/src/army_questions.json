@@ -234,8 +234,8 @@
     {
         "type": 0,
         "qid": 30,
-        "ques": "Identify the song in VC - 2 <br/> https://discord.gg/WvfmpQXr",
-        "link": "#",
+        "ques": "Identify the song in VC - 2",
+        "link": "https://discord.gg/WvfmpQXr",
         "pts": 0,
         "ans": "ben10"
     }
