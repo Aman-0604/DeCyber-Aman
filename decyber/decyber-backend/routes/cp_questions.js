@@ -35,7 +35,7 @@ router.post('/checkCPQ', fetch_user, async (req, res) => {
         let success = false;
         let cpq = await Country_questions.find({ code: req.body.code });
         if (cpq[0].ans !== req.body.ans) {
-            return res.status(400).send('Wrong Answer');
+            return res.status(400).json({success: false});
         }
         success = true;
         res.json({ success });
