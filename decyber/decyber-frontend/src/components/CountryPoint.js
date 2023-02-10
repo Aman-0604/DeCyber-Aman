@@ -63,7 +63,7 @@ const CountryPoint = (props) => {
       <div className='cp-content d-flex justify-content-center'>
         {!cpq[0].type ? <div className='cp-subcontent'>
           <div className="question">
-            <p className="question-pallete">Ques. {cpq[0].ques}</p>
+            <p className="question-pallete" dangerouslySetInnerHTML={{ __html:  'Ques. '+cpq[0].ques }}></p>
             <div className='points-display' style={{ backgroundColor: "rgba(255,255,255,0.3)", height: "1.8rem", borderRadius: ".5rem" }}>
               <p className="points-pallete">Pts. {cpq[0].pts}</p>
             </div>
