@@ -22,7 +22,7 @@ const CountryPoint = (props) => {
       props.showAlert("danger", "Someone has done it earlier");
       return;
     }
-    if (checkcpq(updatedCountryQuestion.code, ans.trim().toLowerCase())) {
+    if (await checkcpq(updatedCountryQuestion.code, ans.toLowerCase().replace(/\s/g, ""))) {
       // update the points of the team if the answer matches correctly
       const newap = user.ap + 0;
       const newcp = user.cp + points;

@@ -19,7 +19,7 @@ const ArmyPoint = (props) => {
       props.showAlert("danger", "Someone has done it earlier");
       return;
     }
-    if (checkapq(updatedQuestion.qid, ans.trim().toLowerCase())) {
+    if (await checkapq(updatedQuestion.qid, ans.trim().toLowerCase())) {
       // update the points of the team if the answer matches correctly
       const newap = user.ap + points;
       const newcp = user.cp + 0;

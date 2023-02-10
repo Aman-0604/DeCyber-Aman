@@ -4,7 +4,7 @@
         "qid": 1,
         "ques": "Let two numbers be a and b such that <br/> a + b = 1000000, a xor b = 500000 , a < b where xor represents the exclusive-or.<br/> The key must be of the form $ab for example if <br/>a = 800, b = 1000 the corresponding key will be $8001000.<br/> Give the key in form of ab",
         "link": "#",
-        "pts": 0,
+        "pts": 60,
         "ans": "250000750000"
     },
     {
@@ -12,7 +12,7 @@
         "qid": 2,
         "ques": "/flash",
         "link": "#",
-        "pts": 0,
+        "pts": 75,
         "ans": "barryallen"
     },
     {
@@ -20,7 +20,7 @@
         "qid": 3,
         "ques": "Bergen-Belsen.<br/>Name of the diary?",
         "link": "#",
-        "pts": 0,
+        "pts": 60,
         "ans": "kitty"
     },
     {
@@ -28,7 +28,7 @@
         "qid": 4,
         "ques": "Find your answer using the image on the link",
         "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/COA_Luftwaffe_eagle_gold.svg/768px-COA_Luftwaffe_eagle_gold.svg.png?20190917172908",
-        "pts": 0,
+        "pts": 25,
         "ans": "luftwaffe"
     },
     {
@@ -36,7 +36,7 @@
         "qid": 5,
         "ques": "+111 days",
         "link": "#",
-        "pts": 0,
+        "pts": 80,
         "ans": "normandy"
     },
     {
@@ -44,7 +44,7 @@
         "qid": 6,
         "ques": "This is everything the transformers needed",
         "link": "#",
-        "pts": 0,
+        "pts": 55,
         "ans": "attention"
     },
     {
@@ -52,7 +52,7 @@
         "qid": 7,
         "ques": "Hey!! I'm hidden",
         "link": "https://drive.google.com/drive/folders/1a-Lm_7aEu5rWQIIWYH044EkPBsu03SOv?usp=share_link",
-        "pts": 0,
+        "pts": 60,
         "ans": "gravityfalls"
     },
     {
@@ -60,23 +60,23 @@
         "qid": 8,
         "ques": "Make your brains run in this chess game and find the white's move",
         "link": "https://drive.google.com/drive/folders/1TtH4SJy_YZVPjRN4IXOKoj0oYK7N53My?usp=share_link",
-        "pts": 0,
+        "pts": 65,
         "ans": "ne7"
     },
     {
         "type": 0,
         "qid": 9,
-        "ques": "Ayee, You Minecraft Player!!<br/> You are not the only one who can carry this. I'm the another.....",
+        "ques": "I am the only one who can carry this block in minecraft other than the players till 1.17",
         "link": "https://drive.google.com/drive/folders/1oR-MlTh0qCIgYmKsZCccxVLO5YpUqzyj?usp=share_link",
-        "pts": 0,
+        "pts": 70,
         "ans": "enderman"
     },
     {
         "type": 0,
         "qid": 10,
-        "ques": " ⠓⠕⠺⠀⠍⠁⠝⠽⠀⠄⠶⠃⠗⠁⠊⠝⠄⠶⠀⠉⠑⠇⠇⠎⠀⠁⠗⠑⠀⠞⠓⠑⠗⠑⠦",
+        "ques": " ⠓⠕⠺⠀⠍⠁⠝⠽⠀⠄⠶⠃⠗⠁⠊⠝⠄⠶⠀⠉⠑⠇⠇⠎⠀⠁⠗⠑⠀⠞⠓⠑⠗⠑⠦   ",
         "link": "#",
-        "pts": 0,
+        "pts": 65,
         "ans": "64"
     },
     {
@@ -84,7 +84,7 @@
         "qid": 11,
         "ques": "Decoding Time",
         "link": "https://drive.google.com/file/d/1BJUMzcVyijebEIYVxShbLqvCND9zhZGh/view?usp=share_link",
-        "pts": 0,
+        "pts": 45,
         "ans": "000000000000000000000000000000000000000010000000000001000000000001000001000"
     },
     {
@@ -92,7 +92,7 @@
         "qid": 12,
         "ques": "Decoding Time",
         "link": "https://drive.google.com/drive/folders/1Vx-cDw1EjLdsTsfeiP9P_WUr99npnN-R?usp=share_link",
-        "pts": 0,
+        "pts": 45,
         "ans": "885"
     },
     {
@@ -100,7 +100,7 @@
         "qid": 13,
         "ques": "Decoding Time",
         "link": "https://drive.google.com/drive/folders/1WNrC5CabHeKCLUHOd6hNpbTlYwM_84fL?usp=share_link",
-        "pts": 0,
+        "pts": 45,
         "ans": "26"
     },
     {
@@ -108,7 +108,7 @@
         "qid": 14,
         "ques": "Decoding Time",
         "link": "https://drive.google.com/drive/folders/1DOJO4ZSNjLFYjOvaW5bXhFDw8cK5YFxq?usp=sharing",
-        "pts": 0,
+        "pts": 40,
         "ans": "borzoi"
     },
     {
@@ -116,7 +116,7 @@
         "qid": 15,
         "ques": "Have you ever thought of getting rich like ?  <br/>Insta 20th April<br/>  Gunbyguncwm uhx Wigjoncha Miwcyns",
         "link": "#",
-        "pts": 0,
+        "pts": 80,
         "ans": "ambani"
     },
     {
@@ -124,7 +124,7 @@
         "qid": 16,
         "ques": "well, hmm",
         "link": "https://drive.google.com/drive/folders/1nZbxibokx0vceg2u9k3CkCDDAIFmoeG3?usp=share_link",
-        "pts": 0,
+        "pts": 25,
         "ans": "sigmoid"
     },
     {
@@ -132,7 +132,7 @@
         "qid": 17,
         "ques": "Even I don't know",
         "link": "https://drive.google.com/drive/folders/1nxCh-Oj17srgGVSxcG3ryuBNkkQBvuHF?usp=share_link",
-        "pts": 0,
+        "pts": 65,
         "ans": "33"
     },
     {
@@ -140,7 +140,7 @@
         "qid": 18,
         "ques": " In London lies a knight a Pope interred.<br/>His labor’s fruit a Holy wrath incurred.<br/>You seek the orb that ought be on his tomb.<br/>It speaks of Rosy flesh and seeded womb.<br/>Is located where in USA?",
         "link": "#",
-        "pts": 0,
+        "pts": 80,
         "ans": "cupertino"
     },
     {
@@ -148,7 +148,7 @@
         "qid": 19,
         "ques": "Wars are never won in daylight, are they?",
         "link": "https://drive.google.com/drive/folders/1Y-nVsytZn7ZwVULiFYi_Sr225BrbJwEJ?usp=share_link",
-        "pts": 0,
+        "pts": 40,
         "ans": "nightvision"
     },
     {
@@ -156,7 +156,7 @@
         "qid": 20,
         "ques": "bandar",
         "link": "https://drive.google.com/drive/folders/1qcUOGn12VQ5CSFCZC47X3TxbTEaE2zBa?usp=share_link",
-        "pts": 0,
+        "pts": 40,
         "ans": "monk"
     },
     {
@@ -164,7 +164,7 @@
         "qid": 21,
         "ques": "My successor??",
         "link": "https://drive.google.com/drive/folders/1BL7oMDemFSn1_GupUZI2QxZQQDzUs9iU?usp=share_link",
-        "pts": 0,
+        "pts": 55,
         "ans": "meteorlake"
     },
     {
@@ -172,7 +172,7 @@
         "qid": 22,
         "ques": "Hitler on insta!",
         "link": "https://www.instagram.com/adolf1223232/",
-        "pts": 0,
+        "pts": 30,
         "ans": "trounce"
     },
     {
@@ -180,7 +180,7 @@
         "qid": 23,
         "ques": "oh",
         "link": "https://drive.google.com/drive/folders/1cV4k1OmUhqHd1ffu5-Y_FD2yhPgDiB-g?usp=share_link",
-        "pts": 0,
+        "pts": 75,
         "ans": "edenhazard"
     },
     {
@@ -188,7 +188,7 @@
         "qid": 24,
         "ques": "/hmm",
         "link": "#",
-        "pts": 0,
+        "pts": 90,
         "ans": "louvre"
     },
     {
@@ -196,7 +196,7 @@
         "qid": 25,
         "ques": "Hint - rmuviml",
         "link": "https://drive.google.com/drive/folders/1udDSMgvCBksvJm0lnygJlLimHFu5TwH8?usp=share_link",
-        "pts": 0,
+        "pts": 50,
         "ans": "dante"
     },
     {
@@ -204,7 +204,7 @@
         "qid": 26,
         "ques": "https://www.google.co.in/ <br/> Hint - 8/30/1998",
         "link": "#",
-        "pts": 0,
+        "pts": 65,
         "ans": "burningman"
     },
     {
@@ -212,7 +212,7 @@
         "qid": 27,
         "ques": "Jackson",
         "link": "https://drive.google.com/drive/folders/1DPjagD_2iuuKEtQuSiwV4ScnEbeaBOu7?usp=share_link",
-        "pts": 0,
+        "pts": 65,
         "ans": "chiral"
     },
     {
@@ -220,7 +220,7 @@
         "qid": 28,
         "ques": "A strange looking stone?",
         "link": "https://drive.google.com/drive/folders/1l0OItfF39l5w6shWx8n6QxJDtf30CDk6?usp=share_link",
-        "pts": 0,
+        "pts": 55,
         "ans": "doctorstrange"
     },
     {
@@ -228,15 +228,167 @@
         "qid": 29,
         "ques": "Not a boat",
         "link": "https://www.croma.com/search/?q=stone%3Arelevance%3AZAStatusFlag%3Atrue%3AexcludeOOSFlag&text=stone",
-        "pts": 0,
+        "pts": 80,
         "ans": "ben10"
     },
     {
         "type": 0,
         "qid": 30,
-        "ques": "Identify the song in VC - 2",
-        "link": "https://discord.gg/WvfmpQXr",
-        "pts": 0,
-        "ans": "ben10"
+        "ques": "Identify the song in VC - 2 <br/> https://discord.gg/WvfmpQXr",
+        "link": "#",
+        "pts": 40,
+        "ans": "blindinglights"
+    },
+    {
+        "type": 0,
+        "qid": 31,
+        "ques": "Maths",
+        "link": "https://drive.google.com/drive/folders/19EjV4E0VL2v6cet7vIwYSzobHS2Eeaob?usp=share_link",
+        "pts": 75,
+        "ans": "79256070"
+    },
+    {
+        "type": 0,
+        "qid": 32,
+        "ques": "#",
+        "link": "https://drive.google.com/drive/folders/1-POTVt_OpVRGjVavGSdp8aQXhM24Fecb",
+        "pts": 85,
+        "ans": "martingarrix"
+    },
+    {
+        "type": 0,
+        "qid": 33,
+        "ques": "Which place in DTU?",
+        "link": "https://drive.google.com/drive/folders/1n622rGDoVdtOCBCdkaq5t0oBOp_q4cAS?usp=share_link",
+        "pts": 40,
+        "ans": "delhischoolofmanagement"
+    },
+    {
+        "type": 0,
+        "qid": 34,
+        "ques": "I am their father, without me no body would have feared each other",
+        "link": "https://drive.google.com/drive/folders/1w1WZPv8YxkHUOGDm-m6YpTnai37IJ9Zh?usp=share_link",
+        "pts": 90,
+        "ans": "j.robertoppenheimer"
+    },
+    {
+        "type": 0,
+        "qid": 35,
+        "ques": "abhcdaefrghrijykl mnpopoqrtsttuvewxryz’abscd efgghoijdklfmnaoptqrhsteuvrwx <br/>I am a Canis Major!",
+        "link": "#",
+        "pts": 65,
+        "ans": "sirius"
+    },
+    {
+        "type": 0,
+        "qid": 36,
+        "ques": "Collecting 999 gold coins for a improvement",
+        "link": "#",
+        "pts": 40,
+        "ans": "gholdengo"
+    },
+    {
+        "type": 0,
+        "qid": 37,
+        "ques": "I see what you don’t see",
+        "link": "https://drive.google.com/drive/folders/1l2cc4daG1Jn9IrC9t-orfoNO7CKGwLZ1?usp=share_link",
+        "pts": 40,
+        "ans": "1939"
+    },
+    {
+        "type": 0,
+        "qid": 38,
+        "ques": "Interesting…",
+        "link": "https://drive.google.com/drive/folders/16AgJoAjnYKjPmfAKbQ9YPkRIEncDha4D?usp=share_link",
+        "pts": 55,
+        "ans": "android"
+    },
+    {
+        "type": 0,
+        "qid": 39,
+        "ques": "Whatsapp?, Computers, Smartphone, Messages?, Nah I am much more in ww2",
+        "link": "#",
+        "pts": 50,
+        "ans": "pager"
+    },
+    {
+        "type": 0,
+        "qid": 40,
+        "ques": "no",
+        "link": "https://drive.google.com/drive/folders/1j_onnd87PjtofSSPWYq3UnoETRBox8EM?usp=sharing",
+        "pts": 80,
+        "ans": "matryoshka"
+    },
+    {
+        "type": 0,
+        "qid": 41,
+        "ques": "yes",
+        "link": "https://drive.google.com/drive/folders/1XgYaakcpTYzxkDJs05aABBASPm0Wta43?usp=sharing",
+        "pts": 75,
+        "ans": "raze"
+    },
+    {
+        "type": 0,
+        "qid": 42,
+        "ques": "ehh",
+        "link": "https://drive.google.com/drive/folders/1RYODSMIy--_DvGEa4XJD1wPz5insfuNg?usp=share_link",
+        "pts": 50,
+        "ans": "worldtradecenter"
+    },
+    {
+        "type": 0,
+        "qid": 43,
+        "ques": "Oops! Something went wrong. <br/>Did it took too long? <br/>Performed wrong maths on string data? <br/>Debug me and you will find me",
+        "link": "#",
+        "pts": 45,
+        "ans": "runtimeerror"
+    },
+    {
+        "type": 0,
+        "qid": 44,
+        "ques": "PLCFLMSPJTTI BGJTWI",
+        "link": "https://drive.google.com/drive/folders/18TNSbdePlK5YLilSGfW1VdURquz29F23?usp=share_link",
+        "pts": 70,
+        "ans": "nepal"
+    },
+    {
+        "type": 0,
+        "qid": 45,
+        "ques": "Need a backend? My family is the reason. <br/>I can be cloudy but look into me for the treason. <br/>I got alternatives but I am still oldest fission",
+        "link": "#",
+        "pts": 40,
+        "ans": "sql"
+    },
+    {
+        "type": 0,
+        "qid": 46,
+        "ques": "I hate chemistry",
+        "link": "https://drive.google.com/drive/folders/1viUSE7pDYlzmcOVxiR-fA5JdkggF95Z-?usp=share_link",
+        "pts": 85,
+        "ans": "vincegilligan"
+    },
+    {
+        "type": 0,
+        "qid": 47,
+        "ques": "Look for the hidden texts in the discord MACS server, in channel de-cyber <br/> https://discord.gg/WvfmpQXr",
+        "link": "#",
+        "pts": 65,
+        "ans": "engifest"
+    },
+    {
+        "type": 0,
+        "qid": 48,
+        "ques": "Find Me",
+        "link": "https://www.canva.com/design/DAFaKbntXgQ/OWOdpnkvbegcMJCH1c2DPQ/view?utm_content=DAFaKbntXgQ&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview",
+        "pts": 60,
+        "ans": "sorry"
+    },
+    {
+        "type": 0,
+        "qid": 49,
+        "ques": "Find Me",
+        "link": "https://drive.google.com/drive/folders/1rlcCpoFMoDUj5Y8WiV1MN0bYbS_ga9w1?usp=share_link",
+        "pts": 45,
+        "ans": "thesoundsofsilence"
     }
 ]
