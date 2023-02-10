@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import ScoreboardContext from "./scoreboardContext";
 
 const ScoreboardState = (props) => {
-    const host = "http://localhost:8000";
+    // const host = "http://localhost:8000";
+    const host = "https://decyber-backend.vercel.app";
     let initialstate = [];
     const [usersScores, setUsersScores] = useState(initialstate);
 

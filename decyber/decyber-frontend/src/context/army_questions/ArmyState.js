@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import ArmyContext from "./armyContext";
 
 const ArmyState = (props) => {
-    const host = "http://localhost:8000";
+    // const host = "http://localhost:8000";
+    const host = "https://decyber-backend.vercel.app";
     const apqItem = [{
         "type": 0,
         "qid": 0,
