@@ -24,7 +24,7 @@ const CountryPoint = (props) => {
     }
     if (await checkcpq(updatedCountryQuestion.code, ans.toLowerCase().replace(/\s/g, ""))) {
       // update the points of the team if the answer matches correctly
-      const newap = user.ap + 0;
+      const newap = user.ap - 35;
       const newcp = user.cp + points;
       updateUser(newap, newcp);
       props.showAlert("success", `${points} Countrypoints added successfuly`);
