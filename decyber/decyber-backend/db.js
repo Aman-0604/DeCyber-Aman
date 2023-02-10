@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 // const mongoURI = "mongodb://localhost:27017/decyber-db";
-const DB = "mongodb+srv://decyber:decyber123@cluster0.tu8wed5.mongodb.net/decyber?retryWrites=true&w=majority";
-
+require('dotenv').config({path:__dirname+'/.env'});
+const DB = process.env.MONGODB_ATLAS_LINK;
+console.log("\n----->DB link is :",DB,"\n\n");
 const connectToMongo = async () => {
     mongoose.connect(DB).then(() => {
         console.log("Connected to Mongo Successfuly");
