@@ -1,4 +1,4 @@
-import React, { useContext,useState, useEffect } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import userContext from '../context/users/userContext';
 import "../styles/dashboard.css"
 import { Avatar } from '../icons';
@@ -9,21 +9,21 @@ import scoreboardContext from '../context/scoreboard/scoreboardContext';
 export default function Dashboard({ time }) {
   let navigate = useNavigate();
   const user_detail = useContext(userContext);
-  const { user, getUser} = user_detail;
+  const { user, loader, getUser } = user_detail;
   const scoreboard = useContext(scoreboardContext);
-  const { usersScores, getScores} = scoreboard;
+  const { usersScores, getScores } = scoreboard;
   const [array, setArray] = useState([])
-  const rankCalculator = ()=>{
-    setArray(()=>{
-      let list = usersScores.sort(({cp:a},{cp:b})=> b - a);
-      list.map((ele,index)=>{
-        ele["rank"] = index+1;
+  const rankCalculator = () => {
+    setArray(() => {
+      let list = usersScores.sort(({ cp: a }, { cp: b }) => b - a);
+      list.map((ele, index) => {
+        ele["rank"] = index + 1;
         return ele;
       })
       return list;
     });
   }
-  const myrank = (array.length!==0)?array.find((ele)=>ele.team_name===user.team_name).rank:0;
+  const myrank = (array.length !== 0) ? array.find((ele) => ele.team_name === user.team_name).rank : 0;
   useEffect(() => {
     if (!localStorage.getItem('token')) {
       navigate('/login')
@@ -38,7 +38,7 @@ export default function Dashboard({ time }) {
   }, [])
   return (
     <>
-      <div className='Dashboard'>
+      {!loader ? <div className='Dashboard'>
         <h1 style={{ textAlign: "center", margin: "1rem 0", color: "lightgreen" }}>{user.team_name}</h1>
         <div className="dashboard-outlier d-flex justify-content-center align-items-center">
           <div className="outlier-2 d-flex flex-column justify-content-center align-items-center" >
@@ -61,7 +61,7 @@ export default function Dashboard({ time }) {
               </div>
               <div className="rank db-props">
                 <div className="rank-props">
-                  <h4>{array.length && myrank.toString()}{myrank!==1?(myrank!==2?((myrank!==3)?"th":"rd"):"nd"):"st"}</h4>
+                  <h4>{array.length && myrank.toString()}{myrank !== 1 ? (myrank !== 2 ? ((myrank !== 3) ? "th" : "rd") : "nd") : "st"}</h4>
                   <p>of {array.length} users</p>
                 </div>
               </div>
@@ -121,7 +121,11 @@ export default function Dashboard({ time }) {
             </div>
           </div>
         </div>
-      </div>
+      </div> : <div className="overlay">
+        <div className="overlay__inner">
+          <div className="overlay__content"><span className="spinner"></span></div>
+        </div>
+      </div>}
     </>
   )
 }

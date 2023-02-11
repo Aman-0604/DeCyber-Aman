@@ -6,10 +6,12 @@ const UserState = (props) => {
   const host = "https://decyber-backend.vercel.app";
   let userItem = [];
   const [user, setUser] = useState(userItem);
+  const [loader, setLoader] = useState(false)
 
   // Get user details
   const getUser = async () => {
     // API Calls
+    setLoader(true) 
     let url = `${host}/api/auth/getUser`;
     const response = await fetch(url, {
       method: "POST",
@@ -20,12 +22,14 @@ const UserState = (props) => {
     });
     const json = await response.json();
     setUser(json);
+    setLoader(false)
 
   }
 
   // Update user details
   const updateUser = async (ap, cp) => {
     // API Calls
+    setLoader(true)
     let url = `${host}/api/auth/updateUser`;
     const response = await fetch(url, {
       method: "PUT",
@@ -43,9 +47,10 @@ const UserState = (props) => {
     newUser.cp = cp;
 
     setUser(newUser);
+    setLoader(false)
   }
   return (
-    <userContext.Provider value={{ user, getUser, updateUser }}>
+    <userContext.Provider value={{ user,loader, getUser, updateUser }}>
       {props.children}
     </userContext.Provider>
   )

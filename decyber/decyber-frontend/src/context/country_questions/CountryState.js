@@ -13,10 +13,11 @@ const CountryState = (props) => {
         "ans": "nothing"
     }]
     const [cpq, setCpq] = useState(cpqItem);
-
+    const [loader, setLoader] = useState(false)
     // Get all country questions
     const getcpq = async (country) => {
         // API Call
+        setLoader(true)
         let url = `${host}/api/cp_questions/fetchcp_question/${country}`;
         const response = await fetch(url, {
             method: "GET",
@@ -27,11 +28,13 @@ const CountryState = (props) => {
         });
         const json = await response.json();
         setCpq(json);
+        setLoader(false)
         return json[0];
     }
     // Get single country question
     const getsinglecpq = async (country) => {
         // API Call
+        setLoader(true)
         let url = `${host}/api/cp_questions/fetchsinglecp_question/${country}`;
         const response = await fetch(url, {
             method: "GET",
@@ -41,11 +44,13 @@ const CountryState = (props) => {
             }
         });
         const json = await response.json();
+        setLoader(false)
         return json[0];
     }
     // Check whether answer is correct or not from backend
     const checkcpq = async (code, ans) => {
         // API Call
+        setLoader(true)
         let url = `${host}/api/cp_questions/checkCPQ`;
         const response = await fetch(url, {
             method: "POST",
@@ -56,6 +61,7 @@ const CountryState = (props) => {
             body: JSON.stringify({ code, ans })
         });
         const json = await response.json();
+        setLoader(false)
         if (json.success) {
             return 1;   // right answer
         }
@@ -67,6 +73,7 @@ const CountryState = (props) => {
     // Update country question
     const updatecpq = async (code, type) => {
         // API Calls
+        setLoader(true);
         let url = `${host}/api/cp_questions/updateCPQ`;
         const response = await fetch(url, {
             method: "PUT",
@@ -88,10 +95,11 @@ const CountryState = (props) => {
             }
         }
         setCpq(newCPQ);
+        setLoader(false)
     }
 
     return (
-        <CountryContext.Provider value={{ cpq, getcpq, getsinglecpq, checkcpq, updatecpq }}>
+        <CountryContext.Provider value={{ cpq,loader, getcpq, getsinglecpq, checkcpq, updatecpq }}>
             {props.children}
         </CountryContext.Provider>
     )
