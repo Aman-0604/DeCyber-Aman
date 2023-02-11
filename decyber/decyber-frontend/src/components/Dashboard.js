@@ -12,18 +12,14 @@ export default function Dashboard({ time }) {
   const { user, loader, getUser } = user_detail;
   const scoreboard = useContext(scoreboardContext);
   const { usersScores, getScores } = scoreboard;
-  const [array, setArray] = useState([])
-  const rankCalculator = () => {
-    setArray(() => {
-      let list = usersScores.sort(({ cp: a }, { cp: b }) => b - a);
-      list.map((ele, index) => {
-        ele["rank"] = index + 1;
-        return ele;
-      })
-      return list;
-    });
-  }
-  const myrank = (array.length !== 0) ? array.find((ele) => ele.team_name === user.team_name).rank : 0;
+  // const [usersScores, setusersScores] = useState([])
+  // const rankCalculator = () => {
+  //   setusersScores(() => {
+      
+  //     return list;
+  //   });
+  // }
+  const myrank = (usersScores.length !== 0) ? usersScores.find((ele) => ele.team_name === user.team_name).rank : 0;
   useEffect(() => {
     if (!localStorage.getItem('token')) {
       navigate('/login')
@@ -32,7 +28,7 @@ export default function Dashboard({ time }) {
     else {
       getUser();
       getScores();
-      rankCalculator();
+      // rankCalculator();
       //eslint-disable-next-line
     }
   }, [])
@@ -61,8 +57,8 @@ export default function Dashboard({ time }) {
               </div>
               <div className="rank db-props">
                 <div className="rank-props">
-                  <h4>{array.length && myrank.toString()}{myrank !== 1 ? (myrank !== 2 ? ((myrank !== 3) ? "th" : "rd") : "nd") : "st"}</h4>
-                  <p>of {array.length} users</p>
+                  <h4>{usersScores.length && myrank.toString()}{myrank !== 1 ? (myrank !== 2 ? ((myrank !== 3) ? "th" : "rd") : "nd") : "st"}</h4>
+                  <p>of {usersScores.length} users</p>
                 </div>
               </div>
             </div>
@@ -109,7 +105,7 @@ export default function Dashboard({ time }) {
                     <th>Name</th>
                     <th>Points</th>
                   </tr>
-                  {array.map((ele, index) => {
+                  {usersScores.map((ele, index) => {
                     return <tr key={index}>
                       <td>{ele.rank}</td>
                       <td>{ele.team_name}</td>
