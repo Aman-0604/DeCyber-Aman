@@ -4,6 +4,7 @@ import "../styles/login.css"
 
 
 export default function Login(props) {
+    const [loader, setLoader] = useState(false)
     let navigate = useNavigate();
     const [credentials, setCredentials] = useState({ team_name: "", team_password: "" });
 
@@ -15,6 +16,7 @@ export default function Login(props) {
     const submitHandler = async (e) => {
         e.preventDefault();
         // const response = await fetch("http://localhost:8000/api/auth/login", {
+        setLoader(true);
         const response = await fetch("https://decyber-backend.vercel.app/api/auth/login", {
             method: "POST",
             headers: {
@@ -23,6 +25,7 @@ export default function Login(props) {
             body: JSON.stringify({ team_name: credentials.team_name, team_password: credentials.team_password })//will convert the object into type JSON
         });
         const json = await response.json();
+        setLoader(false)
         if (json.success) {
             props.showAlert("success", "Login Successful");
             //save the auth token and redirect
@@ -37,7 +40,7 @@ export default function Login(props) {
     return (
         <div className='Login'>
             <div className='container login_form' style={{ width: "50%" }}>
-                <form onSubmit={submitHandler}>
+                {!loader ? <form onSubmit={submitHandler}>
                     <div className="mb-3">
                         <label htmlFor="exampleInputEmail1" className="form-label" style={{ color: "white" }}><h3>Team Name</h3> </label>
                         <input type="text" className="form-control" name="team_name" id="team_name" aria-describedby="emailHelp" value={credentials.team_name} onChange={onChange} />
@@ -50,7 +53,11 @@ export default function Login(props) {
                     <hr style={{ color: 'white' }} />
                     <div className='form-text mt-3'><p> New to DeCyber ?</p></div>
                     <Link to="/signup"><button type="submit" className="btn btn-primary my-3" style={{ backgroundColor: "#212529", color: "lightgreen", border: "none" }}>Signup</button></Link>
-                </form>
+                </form> : <div className="overlay">
+                    <div className="overlay__inner">
+                        <div className="overlay__content"><span className="spinner"></span></div>
+                    </div>
+                </div>}
             </div>
         </div>
     )
