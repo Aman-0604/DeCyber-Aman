@@ -5,6 +5,7 @@ import "../styles/signup.css"
 export default function Signup(props) {
     let navigate = useNavigate();
     const [credentials, setCredentials] = useState({ team_name: "", team_password: "", team_leader: "", team_leader_email: "", team_leader_college: "", team_member_1: "", team_member_1_email: "", team_member_1_college: "" });
+    const [loader, setLoader] = useState(false)
 
     const onChange = (e) => {
         setCredentials({ ...credentials, [e.target.name]: e.target.value });
@@ -12,6 +13,7 @@ export default function Signup(props) {
 
     const submitHandler = async (e) => {
         e.preventDefault();
+        setLoader(true)
         // const response = await fetch("http://localhost:8000/api/auth/createUser", {
         const response = await fetch("https://decyber-backend.vercel.app/api/auth/createUser", {
             method: "POST",
@@ -21,6 +23,7 @@ export default function Signup(props) {
             body: JSON.stringify({ team_name: credentials.team_name, team_password: credentials.team_password, team_leader: credentials.team_leader, team_leader_email: credentials.team_leader_email, team_leader_college: credentials.team_leader_college, team_member_1: credentials.team_member_1, team_member_1_email: credentials.team_member_1_email, team_member_1_college: credentials.team_member_1_college })//will convert the object into type JSON
         });
         const json = await response.json();
+        setLoader(false)
         if (json.success) {
             //save the auth token and redirect
             localStorage.setItem('token', json.auth_token);
@@ -33,7 +36,7 @@ export default function Signup(props) {
     return (
         <div className='Signup'>
             <div className='container' style={{ width: "50%" }}>
-                <form onSubmit={submitHandler}>
+                {!loader?<form onSubmit={submitHandler}>
                     <div className='team-signup'>
                         <div className="mb-3">
                             <label htmlFor="name" className="form-label" style={{ color: "aquamarine" }}><h5>Team Name</h5></label>
@@ -80,7 +83,11 @@ export default function Signup(props) {
                         </div>
                     </div>
                     <button type="submit" className="btn btn-primary" style={{ backgroundColor: "#212529", color: "aquamarine", border: "none" }}>Sign Up</button>
-                </form>
+                </form>:<div className="overlay">
+                    <div className="overlay__inner">
+                        <div className="overlay__content"><span className="spinner"></span></div>
+                    </div>
+                </div>}
             </div>
         </div>
     )
