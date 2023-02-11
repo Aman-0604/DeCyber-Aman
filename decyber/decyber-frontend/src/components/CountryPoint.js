@@ -13,7 +13,7 @@ const CountryPoint = (props) => {
   const { user, updateUser } = user_detail;
 
   const country_detail = useContext(countryContext);
-  const { cpq, getcpq, getsinglecpq, checkcpq, updatecpq } = country_detail;
+  const { cpq, loader, getcpq, getsinglecpq, checkcpq, updatecpq } = country_detail;
 
   const updatePoints = async ({ ans, points }) => {
     // const question = cpq[0];
@@ -58,27 +58,34 @@ const CountryPoint = (props) => {
   }, [])
 
   return (
-    <div className="CountryPoint">
-      <h1 style={{ textAlign: "center", margin: "1rem 0", color: "lightgreen" }}>{country}</h1>
-      <div className='cp-content d-flex justify-content-center'>
-        {!cpq[0].type ? <div className='cp-subcontent'>
-          <div className="question">
-            <p className="question-pallete" dangerouslySetInnerHTML={{ __html:  'Ques. '+cpq[0].ques }}></p>
-            <div className='points-display' style={{ backgroundColor: "rgba(255,255,255,0.3)", height: "1.8rem", borderRadius: ".5rem" }}>
-              <p className="points-pallete">Pts. {cpq[0].pts}</p>
+    <>
+
+      {!loader ? <div className="CountryPoint">
+        <h1 style={{ textAlign: "center", margin: "1rem 0", color: "lightgreen" }}>{country}</h1>
+        <div className='cp-content d-flex justify-content-center'>
+          {!cpq[0].type ? <div className='cp-subcontent'>
+            <div className="question">
+              <p className="question-pallete" dangerouslySetInnerHTML={{ __html: 'Ques. ' + cpq[0].ques }}></p>
+              <div className='points-display' style={{ backgroundColor: "rgba(255,255,255,0.3)", height: "1.8rem", borderRadius: ".5rem" }}>
+                <p className="points-pallete">Pts. {cpq[0].pts}</p>
+              </div>
             </div>
-          </div>
-          {cpq[0].link!=="#" && <p className="question-pallete" style={{textAlign:"center"}}><a href={cpq[0].link} rel="noreferrer" target="_blank" style={{textDecoration:"none"}}>Link</a></p>}
-          <textarea name="answer" id="answer" rows="2" value={text} onChange={onChange} placeholder='Write your answer here'></textarea>
-          <div style={{ width: "75%", marginTop: "1rem",backgroundColor:"transparent" }}>
-            <button className="btn btn-danger me-3" style={{ width: "40%" }} onClick={clearText}>Clear</button>
-            <button className="btn btn-success" style={{ width: "40%" }} onClick={() => {
-              updatePoints({ ans: text, points: cpq[0].pts });
-            }} >Submit</button>
-          </div>
-        </div> : <div className='d-flex align-items-center' style={{ fontSize: '30px',backgroundColor:"transparent" }}><p className='question-pallete'>This country has been captured !</p></div>}
-      </div>
-    </div>
+            {cpq[0].link !== "#" && <p className="question-pallete" style={{ textAlign: "center" }}><a href={cpq[0].link} rel="noreferrer" target="_blank" style={{ textDecoration: "none" }}>Link</a></p>}
+            <textarea name="answer" id="answer" rows="2" value={text} onChange={onChange} placeholder='Write your answer here'></textarea>
+            <div style={{ width: "75%", marginTop: "1rem", backgroundColor: "transparent" }}>
+              <button className="btn btn-danger me-3" style={{ width: "40%" }} onClick={clearText}>Clear</button>
+              <button className="btn btn-success" style={{ width: "40%" }} onClick={() => {
+                updatePoints({ ans: text, points: cpq[0].pts });
+              }} >Submit</button>
+            </div>
+          </div> : <div className='d-flex align-items-center' style={{ fontSize: '30px', backgroundColor: "transparent" }}><p className='question-pallete'>This country has been captured !</p></div>}
+        </div>
+      </div> : <div className="overlay">
+        <div className="overlay__inner">
+          <div className="overlay__content"><span className="spinner"></span></div>
+        </div>
+      </div>}
+    </>
   );
 }
 export default CountryPoint;
