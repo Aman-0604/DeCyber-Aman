@@ -52,7 +52,7 @@ function App() {
                   <Route exact path="/cp/:country" element={<CountryPoint showAlert={showAlert} />} />
                   <Route exact path="/dashboard" element={<Dashboard time={time} />} />
                   <Route exact path="/login" element={<Login showAlert={showAlert} />} />
-                  <Route exact path="/signup_only_adimin" element={<Signup showAlert={showAlert} />} />
+                  <Route exact path="/signup_only_admin" element={<Signup showAlert={showAlert} />} />
                 </Routes>
               </BrowserRouter>
             </ScoreboardState>

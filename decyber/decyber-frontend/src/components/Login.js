@@ -52,7 +52,7 @@ export default function Login(props) {
                     <button type="submit" className="btn btn-primary" style={{ backgroundColor: "#212529", color: "cyan", border: "none" }}>Login</button>
                     {/* <hr style={{ color: 'white' }} /> */}
                     {/* <div className='form-text mt-3'><p> New to DeCyber ?</p></div> */}
-                    {/* <Link to="/signup_only_adimin"><button type="submit" className="btn btn-primary my-3" style={{ backgroundColor: "#212529", color: "lightgreen", border: "none" }}>Signup</button></Link> */}
+                    {/* <Link to="/signup_only_admin"><button type="submit" className="btn btn-primary my-3" style={{ backgroundColor: "#212529", color: "lightgreen", border: "none" }}>Signup</button></Link> */}
                 </form> : <div className="overlay">
                     <div className="overlay__inner">
                         <div className="overlay__content"><span className="spinner"></span></div>
