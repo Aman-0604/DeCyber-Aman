@@ -1,4 +1,5 @@
 import './App.css';
+import { inject } from '@vercel/analytics';
 import Navbar from './components/Navbar';
 import ArmyPoint from './components/ArmyPoint';
 import CountryPoint from './components/CountryPoint';
@@ -29,7 +30,7 @@ function App() {
       setAlert(null)
     }, 2000);
   }
-
+  inject();
   const targetTime = new Date('2023/02/15 13:00:00');
   const currentTime = new Date();
   const time = new Date();
