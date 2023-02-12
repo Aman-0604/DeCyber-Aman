@@ -12,6 +12,8 @@ import ArmyState from './context/army_questions/ArmyState';
 import CountryState from './context/country_questions/CountryState';
 import ScoreboardState from './context/scoreboard/ScoreboardState';
 import Alert from "./components/Alert";
+import About from "./components/About";
+import Rules from "./components/Rules";
 import React, { useState } from 'react'
 import {
   BrowserRouter,
@@ -31,7 +33,7 @@ function App() {
     }, 2000);
   }
   inject();
-  const targetTime = new Date('2023/02/15 13:00:00');
+  const targetTime = new Date('2023/02/15 10:00:00');
   const currentTime = new Date();
   const time = new Date();
   time.setMilliseconds(targetTime - currentTime);
@@ -50,6 +52,8 @@ function App() {
                   <Route exact path="/" element={<WorldMap />} />
                   <Route exact path="/ap" element={<ArmyPoint showAlert={showAlert} />} />
                   <Route exact path="/cp/:country" element={<CountryPoint showAlert={showAlert} />} />
+                  <Route exact path="/about" element={<About />} />
+                  <Route exact path="/rules" element={<Rules />} />
                   <Route exact path="/dashboard" element={<Dashboard time={time} />} />
                   <Route exact path="/login" element={<Login showAlert={showAlert} />} />
                   <Route exact path="/signup_only_admin" element={<Signup showAlert={showAlert} />} />

@@ -27,6 +27,12 @@ export default function Navbar(props) {
                                 <Link className="nav-link active" aria-current="page" to="/" style={{ color: "cyan", fontSize: "25px", fontWeight: "600" }}>Home</Link>
                             </li>
                             <li className="nav-item">
+                                <Link className="nav-link active" aria-current="page" to="/about" style={{ color: "cyan", fontSize: "25px", fontWeight: "600" }}>About</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link active" aria-current="page" to="/rules" style={{ color: "cyan", fontSize: "25px", fontWeight: "600" }}>Rules</Link>
+                            </li>
+                            <li className="nav-item">
                                 <Link className="nav-link active" to="/ap" style={{ color: "cyan", fontSize: "25px", fontWeight: "600" }}>AP <sup style={{ color: "cyan", fontWeight: "600" }}>{user.ap}</sup></Link>
                             </li>
                             <li className="nav-item">
