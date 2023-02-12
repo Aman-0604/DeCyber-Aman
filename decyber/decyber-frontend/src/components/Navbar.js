@@ -24,13 +24,13 @@ export default function Navbar(props) {
                     <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                         <ul className="navbar-nav mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <Link className="nav-link active" aria-current="page" to="/" style={{ color: "cyan", fontSize: "20px", fontWeight: "600" }}>Home</Link>
+                                <Link className="nav-link active" aria-current="page" to="/" style={{ color: "cyan", fontSize: "25px", fontWeight: "600" }}>Home</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link active" to="/ap" style={{ color: "cyan", fontSize: "20px", fontWeight: "600" }}>AP <sup style={{ color: "cyan", fontWeight: "600" }}>{user.ap}</sup></Link>
+                                <Link className="nav-link active" to="/ap" style={{ color: "cyan", fontSize: "25px", fontWeight: "600" }}>AP <sup style={{ color: "cyan", fontWeight: "600" }}>{user.ap}</sup></Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link active" to="/dashboard" style={{ color: "cyan", fontSize: "20px", fontWeight: "600" }}>
+                                <Link className="nav-link active" to="/dashboard" style={{ color: "cyan", fontSize: "25px", fontWeight: "600" }}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="cyan" className="bi bi-person-fill" viewBox="0 0 16 16">
                                         <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
                                     </svg>
@@ -38,9 +38,9 @@ export default function Navbar(props) {
                             </li>
                             <li>
                                 {!localStorage.getItem('token') ? <Link className='dropdown-item' to="/login">
-                                    <button type="button" className="btn" style={{ backgroundColor: "#212529", color: "cyan", fontSize: "20px", fontWeight: "600" }}>Login</button>
+                                    <button type="button" className="btn" style={{ backgroundColor: "#212529", color: "cyan", fontSize: "25px", fontWeight: "600" }}>Login</button>
                                 </Link> : <Link className='dropdown-item' to="/login">
-                                    <button type="button" onClick={logoutHandler} className="btn" style={{ backgroundColor: "#212529", color: "cyan", fontSize: "20px", fontWeight: "600" }}>Logout</button>
+                                    <button type="button" onClick={logoutHandler} className="btn" style={{ backgroundColor: "#212529", color: "cyan", fontSize: "25px", fontWeight: "600" }}>Logout</button>
                                 </Link>}
                             </li>
                         </ul>

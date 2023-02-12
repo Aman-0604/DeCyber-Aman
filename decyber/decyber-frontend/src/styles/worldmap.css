@@ -3,6 +3,7 @@
     padding: 0;
     color: #3D6343;
     background-color : #01171b;
+    font-family: 'Iceland', cursive;
 }
 .world-map-svg{
     width: 95vw;
@@ -33,4 +34,7 @@
 }
 .WorldMap .labels{
     color: darkturquoise;
+}
+.labels h5{
+    font-size: 25px;
 }

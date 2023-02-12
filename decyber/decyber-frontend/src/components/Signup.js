@@ -45,12 +45,12 @@ export default function Signup(props) {
                         <div className="mb-3">
                             <label htmlFor="exampleInputPassword1" className="form-label" style={{ color: "aquamarine" }}><h5>Team Password</h5></label>
                             <input type="password" className="form-control" name="team_password" id="team_password" value={credentials.team_password} onChange={onChange} />
-                            <div id="password" className="form-text" style={{ color: "cyan" }}>Enter a strong password. <span style={{ fontSize: "1.5rem" }}>💪</span></div>
+                            <div id="password" className="form-text" style={{ color: "cyan" }}>Enter a strong password. <span style={{ fontSize: "1rem" }}>💪</span></div>
                         </div>
                     </div>
                     <div className="members">
                         <div className="member-0 member-signup" key={0}>
-                            <p className="member-Number">Team Leader</p>
+                            <h5 className="member-Number">Team Leader</h5>
                             <div className="mb-3">
                                 <label htmlFor="name" className="form-label"><h5>Name</h5></label>
                                 <input type="text" className="form-control" name="team_leader" id="team_leader" value={credentials.team_leader} onChange={onChange} />
@@ -58,7 +58,7 @@ export default function Signup(props) {
                             <div className="mb-3">
                                 <label htmlFor="exampleInputEmail1" className="form-label"><h5>Email address</h5></label>
                                 <input type="email" className="form-control" name="team_leader_email" id="team_leader_email" aria-describedby="emailHelp" value={credentials.team_leader_email} onChange={onChange} />
-                                <div id="emailHelp" className="form-text" style={{ color: "tomato", margin: ".5rem 0" }}>We'll never share your email with anyone else. <span style={{ fontSize: "1.5rem" }}>🤫</span></div>
+                                <div id="emailHelp" className="form-text" style={{ color: "cyan", margin: ".5rem 0" }}>We'll never share your email with anyone else. <span style={{ fontSize: "1rem" }}>🤫</span></div>
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="exampleInputPassword1" className="form-label"><h5>College</h5></label>
@@ -66,7 +66,7 @@ export default function Signup(props) {
                             </div>
                         </div>
                         <div className="member-1 member-signup" key={1}>
-                            <p className="member-Number">Member 1</p>
+                            <h5 className="member-Number">Team Member</h5>
                             <div className="mb-3">
                                 <label htmlFor="name" className="form-label"><h5>Name</h5></label>
                                 <input type="text" className="form-control" name="team_member_1" id="team_member_1" value={credentials.team_member_1} onChange={onChange} />
@@ -74,7 +74,7 @@ export default function Signup(props) {
                             <div className="mb-3">
                                 <label htmlFor="exampleInputEmail1" className="form-label"><h5>Email address</h5></label>
                                 <input type="email" className="form-control" name="team_member_1_email" id="team_member_1_email" aria-describedby="emailHelp" value={credentials.team_member_1_email} onChange={onChange} />
-                                <div id="emailHelp" className="form-text" style={{ color: "tomato", margin: ".5rem 0" }}>We'll never share your email with anyone else. <span style={{ fontSize: "1.5rem" }}>🤫</span></div>
+                                <div id="emailHelp" className="form-text" style={{ color: "cyan", margin: ".5rem 0" }}>We'll never share your email with anyone else. <span style={{ fontSize: "1rem" }}>🤫</span></div>
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="exampleInputPassword1" className="form-label"><h5>College</h5></label>

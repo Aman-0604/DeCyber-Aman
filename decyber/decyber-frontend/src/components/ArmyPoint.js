@@ -64,12 +64,12 @@ const ArmyPoint = (props) => {
                 <div className='carousel-content d-flex justify-content-center align-items-baseline'>
                   {apq.length ? <div className='carousel-subcontent question-section'>
                     <div className="question">
-                      <p className="question-pallete" id="main-ques" dangerouslySetInnerHTML={{ __html: apq[0].qid + '. ' + apq[0].ques }}></p>
+                      <h5 className="question-pallete" id="main-ques" dangerouslySetInnerHTML={{ __html: apq[0].qid + '. ' + apq[0].ques }}></h5>
                       <div className='points-display' style={{ backgroundColor: "rgba(255,255,255,0.3)", height: "1.8rem", borderRadius: ".5rem" }}>
-                        <p className="points-pallete">Pts. {apq[0].pts}</p>
+                        <h5 className="points-pallete">Pts. {apq[0].pts}</h5>
                       </div>
                     </div>
-                    {apq[0].link !== "#" && <p className="question-pallete" style={{ textAlign: "center" }}><a href={apq[0].link} rel="noreferrer" target="_blank" style={{ textDecoration: "none" }}>Link</a></p>}
+                    {apq[0].link !== "#" && <h5 className="question-pallete" style={{ textAlign: "center" }}><a href={apq[0].link} rel="noreferrer" target="_blank" style={{ textDecoration: "none" }}>Link</a></h5>}
                     <textarea name="answer" id="answer" rows="2" value={text} onChange={onChange} placeholder='Write your answer here'></textarea>
                     <div style={{ width: "75%", marginTop: "1rem", backgroundColor: 'transparent' }}>
                       <button className="btn btn-danger me-3" style={{ width: "40%" }} onClick={clearText}>Clear</button>
@@ -88,12 +88,12 @@ const ArmyPoint = (props) => {
                       <div className='carousel-content d-flex justify-content-center align-items-baseline'>
                         <div className='carousel-subcontent question-section'>
                           <div className="question">
-                            <p className="question-pallete" id="main-ques" dangerouslySetInnerHTML={{ __html: ele.qid + '. ' + ele.ques }}></p>
+                            <h5 className="question-pallete" id="main-ques" dangerouslySetInnerHTML={{ __html: ele.qid + '. ' + ele.ques }}></h5>
                             <div className='points-display' style={{ backgroundColor: "rgba(255,255,255,0.3)", height: "1.8rem", borderRadius: ".5rem" }}>
-                              <p className="points-pallete">Pts. {ele.pts}</p>
+                              <h5 className="points-pallete">Pts. {ele.pts}</h5>
                             </div>
                           </div>
-                          {ele.link !== "#" && <p className="question-pallete" style={{ textAlign: "center" }}><a href={ele.link} rel="noreferrer" target="_blank" style={{ textDecoration: "none" }}>Link</a></p>}
+                          {ele.link !== "#" && <h5 className="question-pallete" style={{ textAlign: "center" }}><a href={ele.link} rel="noreferrer" target="_blank" style={{ textDecoration: "none" }}>Link</a></h5>}
                           <textarea name="answer" id="answer" rows="2" value={text} onChange={onChange} placeholder='Write your answer here'></textarea>
                           <div style={{ width: "75%", marginTop: "1rem", backgroundColor: "transparent" }}>
                             <button className="btn btn-danger me-3" style={{ width: "40%" }} onClick={clearText}>Clear</button>

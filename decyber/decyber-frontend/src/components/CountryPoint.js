@@ -65,9 +65,9 @@ const CountryPoint = (props) => {
         <div className='cp-content d-flex justify-content-center'>
           {!cpq[0].type ? <div className='cp-subcontent'>
             <div className="question">
-              <p className="question-pallete" dangerouslySetInnerHTML={{ __html: 'Ques. ' + cpq[0].ques }}></p>
+              <h5 className="question-pallete" dangerouslySetInnerHTML={{ __html: 'Ques. ' + cpq[0].ques }}></h5>
               <div className='points-display' style={{ backgroundColor: "rgba(255,255,255,0.3)", height: "1.8rem", borderRadius: ".5rem" }}>
-                <p className="points-pallete">Pts. {cpq[0].pts}</p>
+                <h5 className="points-pallete">Pts. {cpq[0].pts}</h5>
               </div>
             </div>
             {cpq[0].link !== "#" && <p className="question-pallete" style={{ textAlign: "center" }}><a href={cpq[0].link} rel="noreferrer" target="_blank" style={{ textDecoration: "none" }}>Link</a></p>}
@@ -78,7 +78,7 @@ const CountryPoint = (props) => {
                 updatePoints({ ans: text, points: cpq[0].pts });
               }} >Submit</button>
             </div>
-          </div> : <div className='d-flex align-items-center' style={{ fontSize: '30px', backgroundColor: "transparent" }}><p className='question-pallete'>This country has been captured !</p></div>}
+          </div> : <div className='d-flex align-items-center' style={{ fontSize: '30px', backgroundColor: "transparent" }}><h5 className='question-pallete'>This country has been captured !</h5></div>}
         </div>
       </div> : <div className="overlay">
         <div className="overlay__inner">
