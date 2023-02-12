@@ -7,7 +7,7 @@
 }
 .world-map-svg{
     width: 95vw;
-    height: 95vh;
+    height: 88vh;
 }
 .world-map-svg path{
     /* stroke is for border color */
@@ -37,4 +37,9 @@
 }
 .labels h5{
     font-size: 25px;
+}
+@media (width<=607px) {
+    .labels h5{
+        font-size: 1.25rem;
+    }
 }

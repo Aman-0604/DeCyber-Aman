@@ -13,7 +13,7 @@ body{
 .carousel-content{
     margin: auto;
     width: 80vw;
-    height: 25rem;
+    /* height: 25rem; */
     background-color: #01424dbd;
     border-radius: 2rem;
 }

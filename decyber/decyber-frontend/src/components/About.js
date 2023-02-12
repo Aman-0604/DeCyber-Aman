@@ -1,4 +1,5 @@
 import React from 'react'
+import "../styles/about.css"
 
 export default function About() {
     return (
@@ -52,6 +53,92 @@ export default function About() {
                     [+] Samyak
                 </h5>
             </div> */}
+            <div className="team">
+                <br />
+                <div className='container my-3'>
+                    <h1 style={{ textAlign: "center", color: "cyan" }}>Our Team</h1>
+                </div>
+                <div className='container my-3'>
+                    <h1 style={{ textAlign: "center", color: "cyan" }}>Our Mentors</h1>
+                </div>
+                <div className="subteam">
+                    <div className="cards">
+                        <div className="image_container">
+                            <img className="profile_photo" src="../nikhil2.jpg" alt="error" />
+                        </div>
+                        <div className="member_name">Nikhil Gupta</div>
+                        <div className="desc">Mathematics and Computing Branch, 3rd Year</div>{" "}
+                    </div>
+                    <div className="cards">
+                        <div className="image_container">
+                            <img className="profile_photo" src="../user.jpg" alt="error" />
+                        </div>
+                        <div className="member_name">Keshav</div>
+                        <div className="desc">Mechanical Engineering Branch, 3rd Year</div>{" "}
+                    </div>
+                </div>
+                <div className='container my-3'>
+                    <h1 style={{ textAlign: "center", color: "cyan" }}>Development Team</h1>
+                </div>
+                <div className="subteam">
+                    <div className="cards">
+                        <div className="image_container">
+                            <img className="profile_photo" src="../aman.jpg" alt="error" />
+                        </div>
+                        <div className="member_name">Aman Gupta</div>
+                        <div className="desc">Software Engineering Branch, 2nd Year</div>{" "}
+                    </div>
+                    <div className="cards">
+                        <div className="image_container">
+                            <img className="profile_photo" src="../user.jpg" alt="error" />
+                        </div>
+                        <div className="member_name">Aditya Mishra</div>
+                        <div className="desc">Mathematics and Computing Branch, 2nd Year</div>{" "}
+                    </div>
+                </div>
+                <div className='container my-3'>
+                    <h1 style={{ textAlign: "center", color: "cyan" }}>Content Team</h1>
+                </div>
+                <div className="subteam">
+                    <div className="cards">
+                        <div className="image_container">
+                            <img className="profile_photo" src="../user.jpg" alt="error" />
+                        </div>
+                        <div className="member_name">Nissan</div>
+                        <div className="desc">Mathematics and Computing Branch, 2nd Year</div>{" "}
+                    </div>
+                    <div className="cards">
+                        <div className="image_container">
+                            <img className="profile_photo" src="../user.jpg" alt="error" />
+                        </div>
+                        <div className="member_name">Shivam</div>
+                        <div className="desc">Mathematics and Computing Branch, 2nd Year</div>{" "}
+                    </div>
+                    <div className="cards">
+                        <div className="image_container">
+                            <img className="profile_photo" src="../user.jpg" alt="error" />
+                        </div>
+                        <div className="member_name">Samyak</div>
+                        <div className="desc">Mathematics and Computing Branch, 2nd Year</div>{" "}
+                    </div>
+                    <div className="cards">
+                        <div className="image_container">
+                            <img className="profile_photo" src="../vansh.jpg" alt="error" />
+                        </div>
+                        <div className="member_name">Vansh</div>
+                        <div className="desc">Electrical Engineering Branch, 2nd Year</div>{" "}
+                    </div>
+                </div>
+                <div className="container my-3">
+                    <h1 style={{ textAlign: "center", color: "cyan" }}>End Credits</h1>
+                    <h5 style={{ textAlign: "center", color: "cyan" }}>
+                        We thank every person that came forward to do PR for this event.🙏
+                    </h5>
+                    <h5 style={{ textAlign: "center", color: "cyan" }}>
+                        We thank every contestant that came to play this game, this event couldn't be possible without you guys.😉
+                    </h5>
+                </div>
+            </div>
         </>
 
     )
