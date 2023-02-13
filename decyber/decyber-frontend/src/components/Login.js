@@ -39,8 +39,9 @@ export default function Login(props) {
     }
     return (
         <div className='Login'>
-            <div className='container login_form' style={{ width: "50%" }}>
+            <div className='container login_form' style={{ width: "45%" }}>
                 {!loader ? <form onSubmit={submitHandler}>
+                    <h1 style={{ textAlign: "center", margin: "1rem 0" }}>Team Login</h1>
                     <div className="mb-3">
                         <label htmlFor="exampleInputEmail1" className="form-label" style={{ color: "white" }}><h3>Team Name</h3> </label>
                         <input type="text" className="form-control" name="team_name" id="team_name" aria-describedby="emailHelp" value={credentials.team_name} onChange={onChange} />

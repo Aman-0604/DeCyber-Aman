@@ -30,13 +30,14 @@ export default function Signup(props) {
             navigate("/");
         }
         else {
-            props.showAlert("danger","Some Error Occured");
+            props.showAlert("danger", "Some Error Occured");
         }
     }
     return (
         <div className='Signup'>
-            <div className='container' style={{ width: "50%" }}>
-                {!loader?<form onSubmit={submitHandler}>
+            <div className='container signup-form' style={{ width: "45%" }}>
+                {!loader ? <form onSubmit={submitHandler}>
+                    <h1 style={{ textAlign: "center", margin: "1rem 0", color: "rgb(91, 253, 202)" }}>Team Sign Up</h1>
                     <div className='team-signup'>
                         <div className="mb-3">
                             <label htmlFor="name" className="form-label" style={{ color: "aquamarine" }}><h5>Team Name</h5></label>
@@ -48,6 +49,7 @@ export default function Signup(props) {
                             <div id="password" className="form-text" style={{ color: "cyan" }}>Enter a strong password. <span style={{ fontSize: "1rem" }}>💪</span></div>
                         </div>
                     </div>
+                    <hr style={{ color: "rgb(91, 253, 202)" }} />
                     <div className="members">
                         <div className="member-0 member-signup" key={0}>
                             <h5 className="member-Number">Team Leader</h5>
@@ -65,6 +67,7 @@ export default function Signup(props) {
                                 <input type="college" className="form-control" name="team_leader_college" id="team_leader_college" value={credentials.team_leader_college} onChange={onChange} />
                             </div>
                         </div>
+                        <hr style={{ color: "rgb(91, 253, 202)" }} />
                         <div className="member-1 member-signup" key={1}>
                             <h5 className="member-Number">Team Member</h5>
                             <div className="mb-3">
@@ -82,8 +85,8 @@ export default function Signup(props) {
                             </div>
                         </div>
                     </div>
-                    <button type="submit" className="btn btn-primary" style={{ backgroundColor: "#212529", color: "aquamarine", border: "none" }}>Sign Up</button>
-                </form>:<div className="overlay">
+                    <button type="submit" className="btn btn-primary" style={{ backgroundColor: "#212529", color: "aquamarine", border: "none", marginBottom: "5rem" }}>Sign Up</button>
+                </form> : <div className="overlay">
                     <div className="overlay__inner">
                         <div className="overlay__content"><span className="spinner"></span></div>
                     </div>
