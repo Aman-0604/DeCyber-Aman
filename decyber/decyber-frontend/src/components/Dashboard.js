@@ -15,7 +15,7 @@ export default function Dashboard({ time }) {
   // const [usersScores, setusersScores] = useState([])
   // const rankCalculator = () => {
   //   setusersScores(() => {
-      
+
   //     return list;
   //   });
   // }
@@ -35,7 +35,9 @@ export default function Dashboard({ time }) {
   return (
     <>
       {!loader ? <div className='Dashboard'>
-        <h1 style={{ textAlign: "center", margin: "1rem 0", color: "lightgreen" }}>{user.team_name}</h1>
+        <div className="team-name-header">
+          <h1 style={{ textAlign: "center", margin: "1rem 0", color: "lightgreen" }}>{user.team_name}</h1>
+        </div>
         <div className="dashboard-outlier d-flex justify-content-center align-items-center">
           <div className="outlier-2 d-flex flex-column justify-content-center align-items-center" >
             <div className="user-status">
@@ -62,7 +64,7 @@ export default function Dashboard({ time }) {
                 </div>
               </div>
             </div>
-            <div className="outlier-3 d-flex flex-row justify-content-center align-items-center">
+            <div className="outlier-3">
               <div className="member-details">
                 <div className="member">
                   {/* avatar | name leader/member  */}
@@ -98,6 +100,7 @@ export default function Dashboard({ time }) {
           </div>
           <div className="leader-board">
             <div className="table-layout">
+              <h4 style={{color:"aquamarine"}}>Scoreboard</h4>
               <table>
                 <tbody>
                   <tr>
