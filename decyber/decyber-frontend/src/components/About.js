@@ -28,31 +28,7 @@ export default function About() {
                     4. The team with the most country points at the end of the event will be chosen as the winner.
                 </h5>
             </div>
-            {/* <div className="container my-3">
-                <h1 style={{ color: "cyan" }}>Our Team</h1>
-                <h3 style={{ color: "cyan" }}>
-                    # Developers
-                </h3>
-                <h5 style={{ color: "cyan" }}>
-                    [+] Aman Gupta
-                </h5>
-                <h5 style={{ color: "cyan" }}>
-                    [+] Aditya Mishra
-                </h5>
-                <br />
-                <h3 style={{ color: "cyan" }}>
-                    # Content Providers
-                </h3>
-                <h5 style={{ color: "cyan" }}>
-                    [+] Nissan
-                </h5>
-                <h5 style={{ color: "cyan" }}>
-                    [+] Shivam
-                </h5>
-                <h5 style={{ color: "cyan" }}>
-                    [+] Samyak
-                </h5>
-            </div> */}
+            {/* Team Details and End Credits */}
             <div className="team">
                 <br />
                 <div className='container my-3'>
@@ -63,16 +39,16 @@ export default function About() {
                 </div>
                 <div className="subteam">
                     <div className="cards">
-                        <div className="image_container">
-                            <img className="profile_photo" src="../nikhil2.jpg" alt="error" />
-                        </div>
+                        {/* <div className="image_container">
+                            <img className="profile_photo" src="../nikhil.jpg" alt="error" />
+                        </div> */}
                         <div className="member_name">Nikhil Gupta</div>
                         <div className="desc">Mathematics and Computing Branch, 3rd Year</div>{" "}
                     </div>
                     <div className="cards">
-                        <div className="image_container">
-                            <img className="profile_photo" src="../user.jpg" alt="error" />
-                        </div>
+                        {/* <div className="image_container">
+                            <img className="profile_photo" src="../keshav.jpg" alt="error" />
+                        </div> */}
                         <div className="member_name">Keshav</div>
                         <div className="desc">Mechanical Engineering Branch, 3rd Year</div>{" "}
                     </div>
@@ -82,16 +58,16 @@ export default function About() {
                 </div>
                 <div className="subteam">
                     <div className="cards">
-                        <div className="image_container">
-                            <img className="profile_photo" src="../aman.jpg" alt="error" />
-                        </div>
+                        {/* <div className="image_container">
+                            <img className="profile_photo" src="../user_bg.jpg" alt="error" />
+                        </div> */}
                         <div className="member_name">Aman Gupta</div>
                         <div className="desc">Software Engineering Branch, 2nd Year</div>{" "}
                     </div>
                     <div className="cards">
-                        <div className="image_container">
-                            <img className="profile_photo" src="../user.jpg" alt="error" />
-                        </div>
+                        {/* <div className="image_container">
+                            <img className="profile_photo" src="../user_bg.jpg" alt="error" />
+                        </div> */}
                         <div className="member_name">Aditya Mishra</div>
                         <div className="desc">Mathematics and Computing Branch, 2nd Year</div>{" "}
                     </div>
@@ -101,32 +77,39 @@ export default function About() {
                 </div>
                 <div className="subteam">
                     <div className="cards">
-                        <div className="image_container">
-                            <img className="profile_photo" src="../user.jpg" alt="error" />
-                        </div>
+                        {/* <div className="image_container">
+                            <img className="profile_photo" src="../user_bg.jpg" alt="error" />
+                        </div> */}
                         <div className="member_name">Nissan</div>
                         <div className="desc">Mathematics and Computing Branch, 2nd Year</div>{" "}
                     </div>
                     <div className="cards">
-                        <div className="image_container">
-                            <img className="profile_photo" src="../user.jpg" alt="error" />
-                        </div>
+                        {/* <div className="image_container">
+                            <img className="profile_photo" src="../user_bg.jpg" alt="error" />
+                        </div> */}
                         <div className="member_name">Shivam</div>
                         <div className="desc">Mathematics and Computing Branch, 2nd Year</div>{" "}
                     </div>
                     <div className="cards">
-                        <div className="image_container">
-                            <img className="profile_photo" src="../user.jpg" alt="error" />
-                        </div>
-                        <div className="member_name">Samyak</div>
+                        {/* <div className="image_container">
+                            <img className="profile_photo" src="../user_bg.jpg" alt="error" />
+                        </div> */}
+                        <div className="member_name">Sanyam</div>
                         <div className="desc">Mathematics and Computing Branch, 2nd Year</div>{" "}
                     </div>
                     <div className="cards">
-                        <div className="image_container">
-                            <img className="profile_photo" src="../vansh.jpg" alt="error" />
-                        </div>
+                        {/* <div className="image_container">
+                            <img className="profile_photo" src="../user_bg.jpg" alt="error" />
+                        </div> */}
                         <div className="member_name">Vansh</div>
                         <div className="desc">Electrical Engineering Branch, 2nd Year</div>{" "}
+                    </div>
+                    <div className="cards">
+                        {/* <div className="image_container">
+                            <img className="profile_photo" src="../user_bg.jpg" alt="error" />
+                        </div> */}
+                        <div className="member_name">Prerna</div>
+                        <div className="desc">Computer Engineering Branch, 2nd Year</div>{" "}
                     </div>
                 </div>
                 <div className="container my-3">
