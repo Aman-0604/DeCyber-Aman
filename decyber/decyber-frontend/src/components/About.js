@@ -39,16 +39,16 @@ export default function About() {
                 </div>
                 <div className="subteam">
                     <div className="cards">
-                        {/* <div className="image_container">
+                        <div className="image_container">
                             <img className="profile_photo" src="../nikhil.jpg" alt="error" />
-                        </div> */}
+                        </div>
                         <div className="member_name">Nikhil Gupta</div>
                         <div className="desc">Mathematics and Computing Branch, 3rd Year</div>{" "}
                     </div>
                     <div className="cards">
-                        {/* <div className="image_container">
+                        <div className="image_container">
                             <img className="profile_photo" src="../keshav.jpg" alt="error" />
-                        </div> */}
+                        </div>
                         <div className="member_name">Keshav</div>
                         <div className="desc">Mechanical Engineering Branch, 3rd Year</div>{" "}
                     </div>
@@ -58,16 +58,16 @@ export default function About() {
                 </div>
                 <div className="subteam">
                     <div className="cards">
-                        {/* <div className="image_container">
-                            <img className="profile_photo" src="../user_bg.jpg" alt="error" />
-                        </div> */}
+                        <div className="image_container">
+                            <img className="profile_photo" src="../aman.jpg" alt="error" />
+                        </div>
                         <div className="member_name">Aman Gupta</div>
                         <div className="desc">Software Engineering Branch, 2nd Year</div>{" "}
                     </div>
                     <div className="cards">
-                        {/* <div className="image_container">
-                            <img className="profile_photo" src="../user_bg.jpg" alt="error" />
-                        </div> */}
+                        <div className="image_container">
+                            <img className="profile_photo" src="../user.jpg" alt="error" />
+                        </div>
                         <div className="member_name">Aditya Mishra</div>
                         <div className="desc">Mathematics and Computing Branch, 2nd Year</div>{" "}
                     </div>
@@ -77,44 +77,44 @@ export default function About() {
                 </div>
                 <div className="subteam">
                     <div className="cards">
-                        {/* <div className="image_container">
-                            <img className="profile_photo" src="../user_bg.jpg" alt="error" />
-                        </div> */}
+                        <div className="image_container">
+                            <img className="profile_photo" src="../user.jpg" alt="error" />
+                        </div>
                         <div className="member_name">Nissan</div>
                         <div className="desc">Mathematics and Computing Branch, 2nd Year</div>{" "}
                     </div>
                     <div className="cards">
-                        {/* <div className="image_container">
-                            <img className="profile_photo" src="../user_bg.jpg" alt="error" />
-                        </div> */}
+                        <div className="image_container">
+                            <img className="profile_photo" src="../user.jpg" alt="error" />
+                        </div>
                         <div className="member_name">Shivam</div>
                         <div className="desc">Mathematics and Computing Branch, 2nd Year</div>{" "}
                     </div>
                     <div className="cards">
-                        {/* <div className="image_container">
-                            <img className="profile_photo" src="../user_bg.jpg" alt="error" />
-                        </div> */}
+                        <div className="image_container">
+                            <img className="profile_photo" src="../user.jpg" alt="error" />
+                        </div>
                         <div className="member_name">Sanyam</div>
                         <div className="desc">Mathematics and Computing Branch, 2nd Year</div>{" "}
                     </div>
                     <div className="cards">
-                        {/* <div className="image_container">
-                            <img className="profile_photo" src="../user_bg.jpg" alt="error" />
-                        </div> */}
+                        <div className="image_container">
+                            <img className="profile_photo" src="../user.jpg" alt="error" />
+                        </div>
                         <div className="member_name">Kurush</div>
                         <div className="desc">Electronics and Communication Engineering Branch, 2nd Year</div>{" "}
                     </div>
                     <div className="cards">
-                        {/* <div className="image_container">
-                            <img className="profile_photo" src="../user_bg.jpg" alt="error" />
-                        </div> */}
+                        <div className="image_container">
+                            <img className="profile_photo" src="../vansh.jpg" alt="error" />
+                        </div>
                         <div className="member_name">Vansh</div>
                         <div className="desc">Electrical Engineering Branch, 2nd Year</div>{" "}
                     </div>
                     <div className="cards">
-                        {/* <div className="image_container">
-                            <img className="profile_photo" src="../user_bg.jpg" alt="error" />
-                        </div> */}
+                        <div className="image_container">
+                            <img className="profile_photo" src="../prerna.jpg" alt="error" />
+                        </div>
                         <div className="member_name">Prerna</div>
                         <div className="desc">Computer Engineering Branch, 2nd Year</div>{" "}
                     </div>
