@@ -27,6 +27,7 @@
 .leader-board {
     width: 30%;
     height: 100%;
+    overflow-y: scroll;
     margin-left: 2rem;
     background-image: radial-gradient(#00333cb7 70%, #023e49);
     border-radius: 1rem;

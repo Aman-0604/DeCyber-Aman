@@ -13,6 +13,7 @@ export default function About() {
                     World war 3 is not just a war of nuclear weapons, it’s a cyber war as well. You are fighting for your nation team name. Help your soldiers win the war by neutralizing opposition communications and weapons by decrypting their passwords in the form of questions and getting your hold on them.
                 </h5>
             </div>
+            <br />
             <div className="container my-3">
                 <h1 style={{ color: "cyan" }}>Game Flow</h1>
                 <h5 style={{ color: "cyan" }}>
