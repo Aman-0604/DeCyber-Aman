@@ -100,7 +100,7 @@ export default function About() {
                     </div>
                     <div className="cards">
                         <div className="image_container">
-                            <img className="profile_photo" src="../user.jpg" alt="error" />
+                            <img className="profile_photo" src="../kurush.jpg" alt="error" />
                         </div>
                         <div className="member_name">Kurush</div>
                         <div className="desc">Electronics and Communication Engineering Branch, 2nd Year</div>{" "}
