@@ -1,3 +1,15 @@
+DeCyber, a multiplayer game developed with a friend for a tech fest, requires players to decrypt country-specific codes to
+capture countries, following the hypothetical scenario of a cyber-war in World War III.\
+The website has already attracted 150 visitors and counting, featuring a responsive design, a secure and robust backend,
+and fast loading times. Overall, the website’s attractive and clean appearance makes it an appealing experience for visitors.
+
+# Here is a view of DeCyber
+
+<img alt="Decyber" src="./SS1.png">
+<img alt="Decyber" src="./SS2.png">
+<img alt="Decyber" src="./SS3.png">
+<img alt="Decyber" src="./SS4.png">
+
 # Guidlines before editing into this repo
 1. Fork this repo
 2. Clone this repo
