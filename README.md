@@ -10,6 +10,7 @@ and fast loading times. Overall, the website’s attractive and clean appearance
 <img alt="Decyber" src="./SS3.png">
 <img alt="Decyber" src="./SS4.png">
 
+
 # Guidlines before editing into this repo
 1. Fork this repo
 2. Clone this repo
@@ -57,3 +58,13 @@ Army related questions will only consist of simple puzzles.\
 Capturing questions can range from deciphering, problem solving, decoding,riddles,puzzles,etc. The difficulty of the questions would be from easy to moderate.\
 All the teams will be given access to all country related questions at the start of the event, so there won’t be any levels.\
 The team with the most country points at the end of the event will be chosen as the winner.
+
+
+# Credits
+
+<img alt="Decyber" src="./SS5.png">
+<img alt="Decyber" src="./SS6.png">
+<img alt="Decyber" src="./SS7.png">
+<img alt="Decyber" src="./SS8.png">
+
+
