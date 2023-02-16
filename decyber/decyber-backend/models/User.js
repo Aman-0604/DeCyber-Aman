@@ -45,10 +45,13 @@ const UserSchema = new Schema({
         type: Number,
         default: 0
     },
+    countries_captured: {
+        type: [String]
+    },
     date: {
         type: Date,
         default: Date.now
     },
 })
-const User= mongoose.model('User', UserSchema);
+const User = mongoose.model('User', UserSchema);
 module.exports = User;

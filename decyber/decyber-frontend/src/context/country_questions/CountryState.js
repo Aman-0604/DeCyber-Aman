@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import CountryContext from "./countryContext";
 
 const CountryState = (props) => {
-    // const host = "http://localhost:8000";
-    const host = "https://decyber-backend.vercel.app";
+    const host = "http://localhost:8000";
+    // const host = "https://decyber-backend.vercel.app";
     const cpqItem = [{
         "type": 0,
         "code": "DEFAULT",

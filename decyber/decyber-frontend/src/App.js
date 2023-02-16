@@ -15,6 +15,7 @@ import Alert from "./components/Alert";
 import About from "./components/About";
 import Rules from "./components/Rules";
 import React, { useState } from 'react'
+import Leaderboard from './components/Leaderboard';
 import {
   BrowserRouter,
   Routes,
@@ -54,6 +55,7 @@ function App() {
                   <Route exact path="/cp/:country" element={<CountryPoint showAlert={showAlert} />} />
                   <Route exact path="/about" element={<About />} />
                   <Route exact path="/rules" element={<Rules />} />
+                  <Route exact path="/leaderboard" element={<Leaderboard />} />
                   <Route exact path="/dashboard" element={<Dashboard time={time} />} />
                   <Route exact path="/login" element={<Login showAlert={showAlert} />} />
                   <Route exact path="/signup" element={<Signup showAlert={showAlert} />} />

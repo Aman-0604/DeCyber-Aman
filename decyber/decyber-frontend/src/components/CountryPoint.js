@@ -10,7 +10,7 @@ const CountryPoint = (props) => {
   let { country } = useParams();
 
   const user_detail = useContext(userContext);
-  const { user, updateUser } = user_detail;
+  const { user, updateUser, updateCountryData } = user_detail;
 
   const country_detail = useContext(countryContext);
   const { cpq, loader, getcpq, getsinglecpq, checkcpq, updatecpq } = country_detail;
@@ -27,6 +27,7 @@ const CountryPoint = (props) => {
       const newap = user.ap - 35;
       const newcp = user.cp + points;
       updateUser(newap, newcp);
+      updateCountryData(updatedCountryQuestion.name);
       props.showAlert("success", `${points} Countrypoints added successfuly`);
       updatecpq(updatedCountryQuestion.code, 1);
       setTimeout(() => {

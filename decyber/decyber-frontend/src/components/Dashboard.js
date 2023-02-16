@@ -98,21 +98,17 @@ export default function Dashboard({ time }) {
               </div>
             </div>
           </div>
-          <div className="leader-board">
+          <div className="countries-board">
             <div className="table-layout">
-              <h4 style={{color:"aquamarine"}}>Scoreboard</h4>
+              <h4 style={{ color: "aquamarine" }}>Countries Captured</h4>
               <table>
                 <tbody>
                   <tr>
-                    <th>Rank</th>
-                    <th>Name</th>
-                    <th>Points</th>
+                    <th>Countries</th>
                   </tr>
-                  {usersScores.map((ele, index) => {
+                  {user.countries_captured.map((ele, index) => {
                     return <tr key={index}>
-                      <td>{ele.rank}</td>
-                      <td>{ele.team_name}</td>
-                      <td>{ele.cp}</td>
+                      <td>{ele}</td>
                     </tr>
                   })}
                 </tbody>

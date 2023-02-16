@@ -1,10 +1,10 @@
-import React,{useContext} from 'react'
+import React, { useContext } from 'react'
 import { Link } from "react-router-dom";
 import userContext from '../context/users/userContext';
 
 export default function Navbar(props) {
     const user_detail = useContext(userContext);
-    const { user} = user_detail;
+    const { user } = user_detail;
 
     const logoutHandler = () => {
         localStorage.removeItem('token');
@@ -31,6 +31,9 @@ export default function Navbar(props) {
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link active" aria-current="page" to="/rules" style={{ color: "cyan", fontSize: "25px", fontWeight: "600" }}>Rules</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link active" aria-current="page" to="/leaderboard" style={{ color: "cyan", fontSize: "25px", fontWeight: "600" }}>Scoreboard</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link active" to="/ap" style={{ color: "cyan", fontSize: "25px", fontWeight: "600" }}>AP <sup style={{ color: "cyan", fontWeight: "600" }}>{user.ap}</sup></Link>

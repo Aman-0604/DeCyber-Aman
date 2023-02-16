@@ -24,7 +24,7 @@
     margin-right: 2rem;
 }
 
-.leader-board {
+.countries-board {
     width: 30%;
     height: 100%;
     overflow-y: scroll;
@@ -36,16 +36,16 @@
     padding-top: .5rem;
 }
 
-.leader-board * {
+.countries-board * {
     background-color: transparent;
 }
 
-.leader-board .table-layout {
+.countries-board .table-layout {
     width: 100%;
     text-align: center;
 }
 
-.leader-board .table-layout table {
+.countries-board .table-layout table {
     width: 100%;
 }
 
@@ -301,7 +301,7 @@ table tbody tr td {
         margin-right: 0rem;
     }
 
-    .leader-board {
+    .countries-board {
         width: 100%;
         height: auto;
         margin-top: 2rem;
@@ -327,7 +327,7 @@ table tbody tr td {
         flex-direction: column;
     }
 
-    .leader-board {
+    .countries-board {
         width: 90%;
         height: auto;
     }

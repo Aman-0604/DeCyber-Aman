@@ -136,5 +136,23 @@ router.put('/updateUser', fetch_user, async (req, res) => {
         res.status(500).send("Internal Server Error");
     }
 })
+// Route 5 : Update countries_captured by the user using : PUT "/api/auth/updateCountryData". Login required
+router.put('/updateCountryData', fetch_user, async (req, res) => {
+    try {
+        userId = req.user.id;
+
+        if (userId !== req.user.id) {
+            return res.status(401).send('Not Allowed');
+        }
+        const {name} = req.body;
+        console.log(name);
+        const user = await User.findByIdAndUpdate(userId, { $push: { countries_captured: name, }, }, { new: true });// The default is to return the original, unaltered document. If you want the new, updated document to be returned you have to pass an additional argument: an object with the new property set to true.
+        // new: bool - if true, return the modified document rather than the original. defaults to false (changed in 4.0)
+        res.json({ user });
+    } catch (error) {
+        console.error(error.message);
+        res.status(500).send("Internal Server Error");
+    }
+})
 
 module.exports = router;
