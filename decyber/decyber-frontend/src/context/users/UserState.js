@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import userContext from "./userContext";
 
 const UserState = (props) => {
-  const host = "http://localhost:8000";
-  // const host = "https://decyber-backend.vercel.app";
+  // const host = "http://localhost:8000";
+  const host = "https://decyber-backend.vercel.app";
   let userItem = [];
   const [user, setUser] = useState(userItem);
   const [loader, setLoader] = useState(false)

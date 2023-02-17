@@ -5,7 +5,7 @@ and fast loading times. Overall, the website’s attractive and clean appearance
 
 # Here is a view of DeCyber
 
-<img alt="Decyber" src="./SS1.png">
+<img alt="Decyber" src="./SS9.png">
 <img alt="Decyber" src="./SS2.png">
 <img alt="Decyber" src="./SS3.png">
 <img alt="Decyber" src="./SS4.png">
