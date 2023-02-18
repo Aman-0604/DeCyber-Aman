@@ -5,10 +5,10 @@ and fast loading times. Overall, the website’s attractive and clean appearance
 
 # Here is a view of DeCyber
 
-<img alt="Decyber" src="./SS9.png">
-<img alt="Decyber" src="./SS2.png">
-<img alt="Decyber" src="./SS3.png">
-<img alt="Decyber" src="./SS4.png">
+<img alt="Decyber" src="snapshots/SS9.png">
+<img alt="Decyber" src="snapshots/SS2.png">
+<img alt="Decyber" src="snapshots/SS3.png">
+<img alt="Decyber" src="snapshots/SS4.png">
 
 
 # Guidlines before editing into this repo
@@ -62,9 +62,9 @@ The team with the most country points at the end of the event will be chosen as 
 
 # Credits
 
-<img alt="Decyber" src="./SS5.png">
-<img alt="Decyber" src="./SS6.png">
-<img alt="Decyber" src="./SS7.png">
-<img alt="Decyber" src="./SS8.png">
+<img alt="Decyber" src="snapshots/SS5.png">
+<img alt="Decyber" src="snapshots/SS6.png">
+<img alt="Decyber" src="snapshots/SS7.png">
+<img alt="Decyber" src="snapshots/SS8.png">
 
 
