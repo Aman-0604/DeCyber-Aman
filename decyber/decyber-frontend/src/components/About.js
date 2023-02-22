@@ -128,6 +128,9 @@ export default function About() {
                     <h5 style={{ textAlign: "center", color: "cyan" }}>
                         We thank every contestant that came to play this game, this event couldn't be possible without you guys.😉
                     </h5>
+                    <h5 style={{ textAlign: "center", color: "cyan" }}>
+                        For any feedback, mail us at : decyber.feedback@gmail.com 📨
+                    </h5>
                 </div>
             </div>
         </>
