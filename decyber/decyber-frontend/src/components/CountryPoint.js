@@ -10,7 +10,7 @@ const CountryPoint = (props) => {
   let { country } = useParams();
 
   const user_detail = useContext(userContext);
-  const { user, updateUser, updateCountryData } = user_detail;
+  const { user, getUser, updateUser, updateCountryData } = user_detail;
 
   const country_detail = useContext(countryContext);
   const { cpq, loader, getcpq, getsinglecpq, checkcpq, updatecpq } = country_detail;
@@ -54,6 +54,7 @@ const CountryPoint = (props) => {
     }
     else {
       getcpq(country);
+      getUser();
     }
     // eslint-disable-next-line
   }, [])

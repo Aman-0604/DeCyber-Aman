@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 const ArmyPoint = (props) => {
   let navigate = useNavigate();
   const user_detail = useContext(userContext);
-  const { user, updateUser } = user_detail;
+  const { user, getUser, updateUser } = user_detail;
 
   const army_detail = useContext(armyContext);
   const { apq, getapq, loader, getsingleapq, checkapq, updateapq } = army_detail;
@@ -50,6 +50,7 @@ const ArmyPoint = (props) => {
     }
     else {
       getapq();
+      getUser();
     }
     // eslint-disable-next-line
   }, [])

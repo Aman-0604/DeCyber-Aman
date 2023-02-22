@@ -129,7 +129,7 @@ export default function About() {
                         We thank every contestant that came to play this game, this event couldn't be possible without you guys.😉
                     </h5>
                     <h5 style={{ textAlign: "center", color: "cyan" }}>
-                        For any feedback, mail us at : <a href="mailto:decyber.feedback@gmail.com">decyber.feedback@gmail.com 📨</a>
+                        For any feedback, mail us at : <a href="mailto:decyber.feedback@gmail.com" target={'_blank'}>decyber.feedback@gmail.com 📨</a>
                     </h5>
                 </div>
             </div>
