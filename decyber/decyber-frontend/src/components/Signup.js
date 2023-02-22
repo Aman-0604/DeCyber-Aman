@@ -69,7 +69,7 @@ export default function Signup(props) {
                         </div>
                         <hr style={{ color: "rgb(91, 253, 202)" }} />
                         <div className="member-1 member-signup" key={1}>
-                            <h5 className="member-Number">Team Member</h5>
+                            <h5 className="member-Number">Team Member [Compulsory]</h5>
                             <div className="mb-3">
                                 <label htmlFor="name" className="form-label"><h5>Name</h5></label>
                                 <input type="text" className="form-control" name="team_member_1" id="team_member_1" value={credentials.team_member_1} onChange={onChange} />
