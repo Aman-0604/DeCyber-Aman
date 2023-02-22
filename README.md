@@ -1,6 +1,8 @@
-DeCyber, a multiplayer game developed with a friend for a tech fest, requires players to decrypt country-specific codes to
+<img alt="Promo1" src="snapshots/Promo1.png">
+
+<strong>DeCyber</strong>, a multiplayer game developed with a friend for a tech fest, requires players to decrypt country-specific codes to
 capture countries, following the hypothetical scenario of a cyber-war in World War III.\
-The website has already attracted 150 visitors and counting, featuring a responsive design, a secure and robust backend,
+The website has already attracted 150+ visitors and counting, featuring a responsive design, a secure and robust backend,
 and fast loading times. Overall, the website’s attractive and clean appearance makes it an appealing experience for visitors.
 
 # Here is a view of DeCyber
@@ -66,5 +68,7 @@ The team with the most country points at the end of the event will be chosen as 
 <img alt="Decyber" src="snapshots/SS6.png">
 <img alt="Decyber" src="snapshots/SS7.png">
 <img alt="Decyber" src="snapshots/SS8.png">
+
+<img alt="Promo2" src="snapshots/Promo2.png">
 
 
