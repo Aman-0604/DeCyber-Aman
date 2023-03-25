@@ -68,7 +68,7 @@ const CountryPoint = (props) => {
           {!cpq[0].type ? <div className='cp-subcontent'>
             <div className="question">
               <h5 className="question-pallete" dangerouslySetInnerHTML={{ __html: 'Ques. ' + cpq[0].ques }}></h5>
-              <div className='points-display' style={{ backgroundColor: "rgba(255,255,255,0.3)", height: "1.8rem", borderRadius: ".5rem" }}>
+              <div className='points-display' style={{ backgroundColor: "transparent", height: "1.8rem", borderRadius: ".5rem" }}>
                 <h5 className="points-pallete">Pts. {cpq[0].pts}</h5>
               </div>
             </div>

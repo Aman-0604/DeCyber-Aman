@@ -66,7 +66,7 @@ const ArmyPoint = (props) => {
                   {apq.length ? <div className='carousel-subcontent question-section'>
                     <div className="question">
                       <h5 className="question-pallete" id="main-ques" dangerouslySetInnerHTML={{ __html: apq[0].qid + '. ' + apq[0].ques }}></h5>
-                      <div className='points-display' style={{ backgroundColor: "rgba(255,255,255,0.3)", height: "1.8rem", borderRadius: ".5rem" }}>
+                      <div className='points-display' style={{ backgroundColor: "transparent", height: "1.8rem", borderRadius: ".5rem" }}>
                         <h5 className="points-pallete">Pts. {apq[0].pts}</h5>
                       </div>
                     </div>
@@ -90,7 +90,7 @@ const ArmyPoint = (props) => {
                         <div className='carousel-subcontent question-section'>
                           <div className="question">
                             <h5 className="question-pallete" id="main-ques" dangerouslySetInnerHTML={{ __html: ele.qid + '. ' + ele.ques }}></h5>
-                            <div className='points-display' style={{ backgroundColor: "rgba(255,255,255,0.3)", height: "1.8rem", borderRadius: ".5rem" }}>
+                            <div className='points-display' style={{ backgroundColor: "transparent", height: "1.8rem", borderRadius: ".5rem" }}>
                               <h5 className="points-pallete">Pts. {ele.pts}</h5>
                             </div>
                           </div>
