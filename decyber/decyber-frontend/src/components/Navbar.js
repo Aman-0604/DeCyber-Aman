@@ -30,6 +30,9 @@ export default function Navbar(props) {
                                 <Link className="nav-link active" aria-current="page" to="/about" style={{ color: "cyan", fontSize: "25px", fontWeight: "600" }}>About</Link>
                             </li>
                             <li className="nav-item">
+                                <Link className="nav-link active" aria-current="page" to="/memories" style={{ color: "cyan", fontSize: "25px", fontWeight: "600" }}>Memories</Link>
+                            </li>
+                            <li className="nav-item">
                                 <Link className="nav-link active" aria-current="page" to="/rules" style={{ color: "cyan", fontSize: "25px", fontWeight: "600" }}>Rules</Link>
                             </li>
                             <li className="nav-item">

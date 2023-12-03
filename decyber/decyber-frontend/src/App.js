@@ -13,6 +13,7 @@ import CountryState from './context/country_questions/CountryState';
 import ScoreboardState from './context/scoreboard/ScoreboardState';
 import Alert from "./components/Alert";
 import About from "./components/About";
+import Memories from "./components/Memories";
 import Rules from "./components/Rules";
 import React, { useState } from 'react'
 import Leaderboard from './components/Leaderboard';
@@ -54,6 +55,7 @@ function App() {
                   <Route exact path="/ap" element={<ArmyPoint showAlert={showAlert} />} />
                   <Route exact path="/cp/:country" element={<CountryPoint showAlert={showAlert} />} />
                   <Route exact path="/about" element={<About />} />
+                  <Route exact path="/memories" element={<Memories />} />
                   <Route exact path="/rules" element={<Rules />} />
                   <Route exact path="/leaderboard" element={<Leaderboard />} />
                   <Route exact path="/dashboard" element={<Dashboard time={time} />} />
